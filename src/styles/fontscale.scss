@@ -1,0 +1,56 @@
+// Defaults and variables
+@import 'modularscale/vars';
+
+// Core functions
+@import 'modularscale/settings';
+@import 'modularscale/pow';
+@import 'modularscale/strip-units';
+@import 'modularscale/round-px';
+@import 'modularscale/function';
+
+// Mixins
+@import 'modularscale/respond';
+
+$modularscale: (
+  base: 16px,
+  ratio: 1.6,
+  400px: (
+    ratio: 1.2,
+  ),
+  900px: (
+    base: 16px,
+    ratio: 1.3,
+  ),
+  1200px: (
+    base: 16px,
+    ratio: 1.4,
+  ),
+);
+
+
+.fs-base {
+  @include ms-respond(font-size, 0);
+  line-height: 1.7;
+}
+.fs-md {
+  @include ms-respond(font-size, 1);
+  line-height: 1.6;
+}
+.fs-lg {
+  @include ms-respond(font-size, 2);
+  line-height: 1.7;
+}
+.fs-xl {
+  @include ms-respond(font-size, 3);
+  line-height: 1.3;
+}
+.fs-xxl {
+  @include ms-respond(font-size, 4);
+  line-height: 1.1;
+}
+
+@media (max-width: 400px) {
+  .fs-base {
+    font-size: 15px;
+  }
+}
