@@ -8,42 +8,42 @@
   &__picture {
     position: relative;
     width: 50%;
-    padding-top: 30px;
+    padding-top: toRem(30px);
     &__me {
       max-height: 70vh;
     }
     &__ecology {
       position: absolute;
-      top: 18px;
+      top: toRem(18px);
       left: 19%;
       display: block;
     }
     &__work {
       position: absolute;
       right: 7%;
-      top: 257px;
+      top: toRem(257px);
     }
     &__pet {
       position: absolute;
-      bottom: 42px;
+      bottom: toRem(42px);
       left: 14%;
     }
   }
   &__text {
-    color: #0082c8;
+    color: $secondary-color;
     width: 50%;
   }
   &__circle {
-    width: 250px;
-    height: 250px;
+    width: toRem(250px);
+    height: toRem(250px);
     border-radius: 100% 0 0 0;
     position: absolute;
-    bottom: 0px;
-    right: 0px;
+    bottom: 0;
+    right: 0;
     &--smaller {
       border-radius: 0 0 100% 0;
-      width: 150px;
-      height: 150px;
+      width: toRem(150px);
+      height: toRem(150px);
       position: absolute;
       top: 0;
       left: 0;
@@ -52,7 +52,7 @@
   }
 }
 
-@media (max-width: 1600px) {
+@media (max-width: toRem(1600px)) {
   .home__picture__ecology {
     left: 16%;
   }
@@ -64,26 +64,26 @@
   }
 }
 
-@media (max-width: 1460px) {
+@media (max-width: toRem(1460px)) {
   .home__text {
     padding-left: 5%;
   }
   .home__circle {
-    width: 200px;
-    height: 200px;
+    width: toRem(200px);
+    height: toRem(200px);
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: toRem(1000px)) {
   .home {
     position: relative;
     flex-direction: column;
     justify-content: center;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: toRem(80px);
+    padding-bottom: toRem(80px);
     &__circle {
-      width: 100px;
-      height: 100px;
+      width: toRem(100px);
+      height: toRem(100px);
     }
     &__picture {
       padding-top: 0;
@@ -96,7 +96,7 @@
       }
     }
     &__text {
-      padding-top: 30px;
+      padding-top: toRem(30px);
       width: 100%;
       padding-left: 0;
     }
