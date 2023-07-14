@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*::after {
+  box-sizing: border-box;
+}
+
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: $primary-color;
+  font-family: 'Arima Madurai', sans-serif;
+  font-size: ms(0);
+  line-height: 1.7;
+  margin: 0 auto;
+  max-width: 2685px;
+  overflow-x: hidden;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+
+.img-contain {
+  object-fit: contain;
+}
+
+.border-img {
+  border-radius: 40%;
+}
+
+.png-w {
+  width: 80px;
+}

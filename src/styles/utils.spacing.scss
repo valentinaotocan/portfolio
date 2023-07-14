@@ -1,0 +1,19 @@
+// 8px
+$spacer: 0.5rem;
+
+// padding-bottom
+.pb-xxs {
+  padding-bottom: ($spacer * 0.5);
+}
+.pb-xs {
+  padding-bottom: ($spacer * 1);
+}
+.pb-sm {
+  padding-bottom: ($spacer * 1.5);
+}
+
+// custom
+.plr-small {
+ padding-left: 8%;
+ padding-right: 8%;
+}

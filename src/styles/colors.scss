@@ -1,0 +1,20 @@
+$primary-color: #fef7f1;
+$secundary-color: #0082c8;
+$blue-color: #0067c8;
+
+.linear-bg {
+  background: -webkit-linear-gradient(
+    to top,
+    #667db6,
+    #0082c8,
+    #0082c8,
+    #667db6
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #667db6,
+    #0082c8,
+    #0082c8,
+    #667db6
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
