@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
 import { fromOpacity } from "../Animation";
 import { fromTop } from "../Animation";
+import useTitle from "../hooks/useTitle";
 import valentinaOtocan from "../assets/images/valentina-otocan.jpeg";
 import pet from "../assets/images/icons/pet.png";
 import work from "../assets/images/icons/work.png";
 import ecology from "../assets/images/icons/ecology.png";
 
 function Home() {
+  useTitle('Naslovna');
   return (
     <section className="home plr-small">
       <div className="home__circle linear-bg"></div>

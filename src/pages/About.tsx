@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { fromOpacity, fromTop } from '../Animation';
-
+import useTitle from "../hooks/useTitle";
 import skills from '../assets/images/icons/skills.png';
 import handshake from "../assets/images/icons/handshake.png";
 import profile from "../assets/images/profile.jpeg";
@@ -8,6 +8,7 @@ import coding from "../assets/images/icons/coding.png";
 import puzzle from "../assets/images/icons/puzzle.png";
 
 function About() {
+  useTitle("O meni");
   return (
     <>
       <section className="section section--first about-me ptb-custom plr-custom">
