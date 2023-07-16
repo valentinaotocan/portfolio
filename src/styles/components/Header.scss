@@ -1,0 +1,26 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #fef7f1f5;
+  z-index: 5;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5%;
+  align-items: center;
+
+  a.active {
+    position: relative;
+    padding-bottom: 1px;
+    &:after {
+      bottom: 0px;
+      content: "";
+      display: block;
+      height: 4px;
+      left: 0%;
+      position: absolute;
+      background: $secondary-color;
+      width: 100%;
+    }
+  }
+}

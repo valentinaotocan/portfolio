@@ -1,0 +1,29 @@
+.underline {
+  position: relative;
+  padding-bottom: 1px;
+  &:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0px;
+    content: '';
+    display: block;
+    height: 2px;
+    left: 0%;
+    position: absolute;
+    background: $secondary-color;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+
+  &:hover {
+    &:after {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  &--primary-clr {
+    &:after {
+      background: $primary-color;
+    }
+  }
+}
