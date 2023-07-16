@@ -6,7 +6,6 @@
 @import './pages/Home';
 @import './pages/About';
 
-// global
 * {
   margin: 0;
   padding: 0;
@@ -16,11 +15,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-*::after {
-  box-sizing: border-box;
-}
-
-*::after {
+*::before, *::after {
   box-sizing: border-box;
 }
 
@@ -35,9 +30,19 @@ body {
   font-family: 'Arima Madurai', sans-serif;
   font-size: ms(0);
   line-height: 1.7;
-  margin: 0 auto;
-  max-width: toRem(2685px);
   overflow-x: hidden;
+  // Improve text rendering
+  -webkit-font-smoothing: antialiased;
+
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input, button, textarea, select {
+  font: inherit;
 }
 
 img {
