@@ -1,6 +1,20 @@
 // 8px
 $spacer: 0.5rem;
 
+// padding top
+.pt-xxs {
+  padding-top: ($spacer * 0.5);
+}
+.pt-xs {
+  padding-top: ($spacer * 1);
+}
+.pt-sm {
+  padding-top: ($spacer * 1.5);
+}
+.pt-md {
+  padding-top: ($spacer * 2);
+}
+
 // padding-bottom
 .pb-xxs {
   padding-bottom: ($spacer * 0.5);
@@ -11,9 +25,75 @@ $spacer: 0.5rem;
 .pb-sm {
   padding-bottom: ($spacer * 1.5);
 }
+.pb-md {
+  padding-bottom: ($spacer * 2);
+}
+
+// margin-left
+.ml-xxs {
+  margin-left: ($spacer * 0.5);
+}
+.ml-xs {
+  margin-left: ($spacer * 1);
+}
+.ml-sm {
+  margin-left: ($spacer * 1.5);
+}
+.ml-md {
+  margin-left: ($spacer * 2);
+}
+.ml-lg {
+  margin-left: ($spacer * 3);
+}
+.ml-6xl {
+  margin-left: ($spacer * 9);
+}
 
 // custom
+.ptb-custom {
+  padding-top: toRem(130px);
+  padding-bottom: toRem(130px);
+}
+
 .plr-small {
  padding-left: 8%;
  padding-right: 8%;
+}
+
+.plr-custom {
+  padding-left: 13%;
+  padding-right: 13%; 
+}
+
+.pl-5 {
+  padding-left: 5%;
+}
+
+.mw-550 {
+  max-width: toRem(550px);
+}
+
+@media (max-width: 1400px) {
+  .plr-custom {
+    padding-left: 8%;
+    padding-right: 8%; 
+  }
+}
+
+@media (max-width: toRem(1024px)) {
+  .pl-5 {
+    padding-left: 0;
+  } 
+  .ptb-custom {
+    padding-top: 100px;
+    padding-bottom: 100px; 
+  }
+}
+
+@media (max-width: toRem(425px)) {
+  .plr-small,
+  .plr-custom {
+    padding-left: toRem(24px);
+    padding-right: toRem(24px);
+  }
 }

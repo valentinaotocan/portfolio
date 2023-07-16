@@ -1,0 +1,103 @@
+.about-me {
+  display: flex;
+
+  &__circle {
+    position: absolute;
+    width: toRem(340px);
+    height: toRem(170px);
+    left: 12%;
+    bottom: 0;
+    border-radius: toRem(180px) toRem(180px) 0 0;
+  }
+  &__icon-skills {
+    display: none;
+  }
+  &__icon-handshake {
+    display: none;
+  }
+  &__text {
+    width: 50%;
+    &__virtues {
+      display: flex;
+    }
+  }
+  &__img {
+    width: 50%;
+  }
+}
+
+.frontend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  &__icon-puzzle {
+    position: absolute;
+    bottom: -44px;
+    right: 11%;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .about-me__text {
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-me {
+    flex-direction: column;
+    &__icon-handshake {
+      display: block;
+      position: absolute;
+      bottom: 83px;
+      left: 6%;
+    }
+    &__icon-skills {
+      display: block;
+      position: absolute;
+      right: 17%;
+      top: 200px;
+    }
+    &__text {
+      width: 100%;
+      padding-right: 0;
+      padding-bottom: 70px;
+    }
+    &__img {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    &__circle {
+      width: 200px;
+      height: 100px;
+      border-radius: 110px 110px 0 0;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .about-me__icon-skills {
+    display: none;
+  }
+  .about-me__icon-handshake {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-me {
+    &__circle {
+      width: 130px;
+      height: 70px;
+      border-radius: 100px 100px 0 0;
+    }
+    &__text__virtues {
+      .ml-6xl {
+        margin-left: 42px;
+      }
+    }
+  }
+}
