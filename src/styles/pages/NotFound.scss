@@ -6,4 +6,9 @@
   text-align: center;
   padding-left: toRem(24px);
   padding-right: toRem(24px);
+
+  img {
+    width: 200px;
+    margin: 0 auto toRem(26px);
+  }
 }
