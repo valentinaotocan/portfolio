@@ -6,7 +6,7 @@ export const fromOpacity = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 2,
+      duration: 0.6,
       cubicBezier: [0.46,0.03,0.52,0.96],
     },
   },
@@ -21,7 +21,7 @@ export const fromTop = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 2,
+      duration: 0.6,
       cubicBezier: [0.46, 0.03, 0.52, 0.96],
       delay: 0.25,
     },
