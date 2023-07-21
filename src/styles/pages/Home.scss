@@ -74,7 +74,7 @@
   }
 }
 
-@media (max-width: toRem(1000px)) {
+@media (max-width: toRem(1024px)) {
   .home {
     position: relative;
     flex-direction: column;
@@ -103,24 +103,24 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width:toRem(768px)) {
   .home__picture {
     width: 80%;
   }
   .home__picture__work {
     right: -8%;
-    top: 200px;
+    top: toRem(200px);
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: toRem(500px)) {
   .home__picture {
     width: 100%;
     &__ecology {
       display: none;
     }
     &__pet {
-      bottom: -200px;
+      bottom: toRem(-200px);
       left: 5%;
     }
     &__work {
@@ -129,7 +129,7 @@
     }
   }
   .home__circle--smaller {
-    width: 100px;
-    height: 100px;
+    width: toRem(100px);
+    height: toRem(100px);
   }
 }
