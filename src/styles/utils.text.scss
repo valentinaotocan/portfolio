@@ -6,5 +6,5 @@ $fw-medium: 500;
 $fw-bold: 700;
 
 .fw-medium {
-	font-weight: 500;
+	font-weight: $fw-medium;
 }
