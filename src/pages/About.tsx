@@ -70,7 +70,8 @@ function About() {
           alt="Coding"
           variants={fromTop}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true }}
         />
         <motion.img
           src={puzzle}
@@ -79,7 +80,8 @@ function About() {
           alt="Puzzle"
           variants={fromTop}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true }}
         />
         <h2 className="fs-xl pt-md pb-sm">Zašto baš frontend?</h2>
         <div className="frontend__text mw-550">
