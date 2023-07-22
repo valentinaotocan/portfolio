@@ -2,10 +2,13 @@ $primary-color: #fef7f1;
 $secondary-color: #0082c8;
 $blue-color: #0067c8;
 
+.txt-color-primary {
+  color: $primary-color;
+}
+
 .txt-color-secondary {
   color: $secondary-color;
 }
-
 
 .linear-bg {
   background: -webkit-linear-gradient(
