@@ -6,6 +6,7 @@ import handshake from "../assets/images/icons/handshake.png";
 import profile from "../assets/images/profile.jpeg";
 import coding from "../assets/images/icons/coding.png";
 import puzzle from "../assets/images/icons/puzzle.png";
+import Slider from '../components/Slider';
 
 function About() {
   useTitle("O meni");
@@ -97,6 +98,10 @@ function About() {
           </p>
           <p className="fs-base">Idealan je za vizualne tipove poput mene.</p>
         </div>
+      </section>
+
+      <section className='ptb-custom plr-custom'>
+        <Slider />
       </section>
     </>
   );
