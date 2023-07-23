@@ -41,7 +41,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, a {
+h1, h2, h3, a {
  font-family: 'Arima Madurai', sans-serif;
 }
 
@@ -75,6 +75,14 @@ img {
 
 .png-w {
   width: toRem(80px);
+}
+
+.pos-r {
+  position: relative;
+}
+
+.pos-a {
+  position: absolute;
 }
 
 .section {

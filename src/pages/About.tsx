@@ -1,12 +1,15 @@
-import { motion } from 'framer-motion';
-import { fromOpacity, fromTop } from '../Animation';
+import { motion } from "framer-motion";
+import { fromOpacity, fromTop } from "../Animation";
 import useTitle from "../hooks/useTitle";
-import skills from '../assets/images/icons/skills.png';
+import skills from "../assets/images/icons/skills.png";
 import handshake from "../assets/images/icons/handshake.png";
 import profile from "../assets/images/profile.jpeg";
 import coding from "../assets/images/icons/coding.png";
 import puzzle from "../assets/images/icons/puzzle.png";
-import Slider from '../components/Slider';
+import book from '../assets/images/icons/book.png';
+import sunset from '../assets/images/icons/sunset.png';
+import succulent from '../assets/images/icons/succulent.png';
+import Slider from "../components/Slider";
 
 function About() {
   useTitle("O meni");
@@ -100,7 +103,65 @@ function About() {
         </div>
       </section>
 
-      <section className='ptb-custom plr-custom'>
+      <section className="section hobby ptb-custom plr-custom">
+        <div className="hobby__circle-top linear-bg"></div>
+        <div className="hobby__circle-bottom linear-bg"></div>
+        <div className="mw-550">
+          <h2 className="fs-xl pb-sm">Hobi</h2>
+          <div className="pos-r">
+            <h3 className="fs-lg">Čitanje knjiga</h3>
+            <p className="pb-lg fs-base">
+              Najviše volim čitati knjige o psihologiji jer me osvješćuju i
+              otvaraju neki novi pogled na stvari.
+            </p>
+            <motion.img
+              src={book}
+              loading="lazy"
+              className="icon-book pos-a png-w fromTop"
+              alt="Book"
+              variants={fromTop}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            />
+          </div>
+          <div className="pos-r">
+            <h3 className="fs-lg">Priroda</h3>
+            <p className="pb-lg fs-base">
+              Od šetnje prirodom koja je dnevni odmor za dušu i tijelo do
+              istraživanja sakrivenih mjesta.
+            </p>
+            <motion.img
+              src={sunset}
+              loading="lazy"
+              className="icon-nature pos-a png-w fromTop"
+              alt="Sunset"
+              variants={fromTop}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            />
+          </div>
+          <div className="pos-r">
+            <h3 className="fs-lg">Biljke</h3>
+            <p className="pb-lg fs-base">
+              Uzgoj sukulenata. Što su neobičniji to su zanimljiviji.
+            </p>
+            <motion.img
+              src={succulent}
+              loading="lazy"
+              className="icon-succulent pos-a png-w fromTop"
+              alt="Succulent"
+              variants={fromTop}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            />
+          </div>
+          <h3 className="fs-lg">Fotografija</h3>
+          <p className="pb-xl fs-base">Galerija mojih fotografija.</p>
+        </div>
+
         <Slider />
       </section>
     </>
