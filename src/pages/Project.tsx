@@ -14,6 +14,19 @@ function Project() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
+  const formatDate = (dateString: string) => {
+    const dateObject = new Date(dateString);
+    const day = dateObject.getDate();
+    const month = dateObject.getMonth() + 1;
+    const year = dateObject.getFullYear();
+
+    const formattedDate = `${day < 10 ? "0" : ""}${day}.${
+      month < 10 ? "0" : ""
+    }${month}.${year}.`;
+
+    return formattedDate;
+  };
+
   useEffect(() => {
     const fetchPosts = async () => {
       setLoading(true);
@@ -54,18 +67,19 @@ function Project() {
             <div key={post.name} className="cards__card">
               <div>
                 <h2>Ime projekta: {post.name}</h2>
-                <p>Opis projekta: {post.description !==null ? post.description : 'Nema'}</p>
+                <p>
+                  Opis projekta:{" "}
+                  {post.description !== null ? post.description : "Nema"}
+                </p>
                 <p>
                   Tagovi:{" "}
-                  {post.topics.length > 0
-                    ? post.topics.join(", ")
-                    : "Nema"}
+                  {post.topics.length > 0 ? post.topics.join(", ") : "Nema"}
                 </p>
                 <p>Najviše prevladava: {post.language}</p>
-                <p>Stvoreno: {post.created_at}</p>
+                <p>Stvoreno: {formatDate(post.created_at)}</p>
               </div>
               <a href={post.html_url}>
-                <button>Vidi više</button>
+                <button type="button" className="btn linear-bg">Vidi više</button>
               </a>
             </div>
           );

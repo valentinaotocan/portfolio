@@ -7,8 +7,12 @@
     flex-direction: column;
     justify-content: space-between;
     border: 3px solid $secondary-color;
-    height: toRem(300px);
-    width: toRem(300px);
+    // height: toRem(300px);
+    width: 100%;
+    max-width: toRem(320px);
     padding: toRem(12px);
+    a {
+      align-self: center;
+    }
   }
 }
