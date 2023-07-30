@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Loader from "../components/Loader";
+import exclamation from '../assets/images/icons/exclamation-mark.png';
 
 interface Post {
   html_url: string;
@@ -58,6 +59,7 @@ function Project() {
   if (error) {
     return (
       <div className="error">
+        <img src={exclamation} alt="Error" />
         <p className="fs-xl">Nešto nije u redu.</p>
         <p>Pogreška u dohvaćanju informacija s poslužitelja.</p>
       </div>
