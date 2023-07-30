@@ -8,7 +8,6 @@
 
 @import './pages/Home';
 @import './pages/About';
-@import './pages/NotFound';
 @import './pages/Project';
 
 @import './components/Header';
@@ -95,6 +94,21 @@ img {
     @media (max-width: toRem(1024px)) {
       margin-top: 0;
     }
+  }
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  place-content: center;
+  text-align: center;
+  padding-left: toRem(24px);
+  padding-right: toRem(24px);
+
+  img {
+    width: 200px;
+    margin: 0 auto toRem(26px);
   }
 }
 

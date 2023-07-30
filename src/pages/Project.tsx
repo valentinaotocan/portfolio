@@ -52,14 +52,16 @@ function Project() {
   }, []);
 
   if (loading) {
-    return <Loader />
+    return <Loader />;
   }
 
   if (error) {
-    return <div>
-      <p>Error fetching data</p>
-      <p>An error occurred while accessing data.</p>
-    </div>;
+    return (
+      <div className="error">
+        <p className="fs-xl">Nešto nije u redu.</p>
+        <p>Pogreška u dohvaćanju informacija s poslužitelja.</p>
+      </div>
+    );
   }
 
   return (
@@ -83,7 +85,9 @@ function Project() {
                 <p>Stvoreno: {formatDate(post.created_at)}</p>
               </div>
               <a href={post.html_url}>
-                <button type="button" className="btn linear-bg">Vidi više</button>
+                <button type="button" className="btn linear-bg">
+                  Vidi više
+                </button>
               </a>
             </div>
           );
