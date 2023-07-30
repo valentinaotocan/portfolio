@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Loader from "../components/Loader";
 
 interface Post {
   html_url: string;
@@ -51,11 +52,14 @@ function Project() {
   }, []);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <Loader />
   }
 
   if (error) {
-    return <div>Error occurred while fetching data from GitHub API.</div>;
+    return <div>
+      <p>Error fetching data</p>
+      <p>An error occurred while accessing data.</p>
+    </div>;
   }
 
   return (
