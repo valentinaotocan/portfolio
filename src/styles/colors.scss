@@ -1,5 +1,7 @@
 $primary-color: #fef7f1;
 $secondary-color: #0082c8;
+$linear-gradient: linear-gradient(to top, #667db6, #0082c8, #0082c8, #667db6);
+
 
 .txt-color-primary {
   color: $primary-color;
@@ -10,18 +12,9 @@ $secondary-color: #0082c8;
 }
 
 .linear-bg {
-  background: -webkit-linear-gradient(
-    to top,
-    #667db6,
-    #0082c8,
-    #0082c8,
-    #667db6
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to top,
-    #667db6,
-    #0082c8,
-    #0082c8,
-    #667db6
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -moz-linear-gradient(to top, #667db6, #0082c8, #0082c8, #667db6); /* Firefox 3.6+ */
+  background: -webkit-linear-gradient(to top, #667db6, #0082c8, #0082c8, #667db6); /* Safari 5.1+, Chrome 10+ */
+  background: -o-linear-gradient(to top, #667db6, #0082c8, #0082c8, #667db6); /* Opera 11.10+ */
+  background: -ms-linear-gradient(to top, #667db6, #0082c8, #0082c8, #667db6); /* IE 10+ */
+  background: linear-gradient(to top, #667db6, #0082c8, #0082c8, #667db6); /* global 94%+ browsers support */
 }

@@ -1,7 +1,41 @@
 .btn {
-  padding: toRem(10px) toRem(25px);
+  display: flex;
+  padding: 5px 20px;
   cursor: pointer;
-  border: none;
-  border-radius: 52px;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+  line-height: 35px;
+  border: 1px solid #667db6;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 5s;
+  position: relative;
   color: $primary-color;
+  &::before,
+  &::after {
+    width: 29px;
+    height: 29px;
+    position: absolute;
+    border-radius: 50%;
+    background: $linear-gradient;
+    transition: all 0.5s ease;
+    transform: scale(0);
+    content: "";
+    z-index: -1;
+  }
+  &::before {
+    top: -10px;
+    right: 18%;
+  }
+  &::after {
+    bottom: -8px;
+    left: 20%;
+  }
+  &:hover {
+    &::before,
+    &::after {
+      transform: scale(1);
+    }
+  }
 }
