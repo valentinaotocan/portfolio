@@ -12,6 +12,9 @@ function Header() {
       <NavLink to="/projekti" className="mr-xl underline">
         Projekti
       </NavLink>
+      <NavLink to="/kontakt" className="mr-xl underline">
+        Kontakt
+      </NavLink>
     </nav>
   );
 }
