@@ -5,6 +5,18 @@ $fw-normal: 400;
 $fw-medium: 500;
 $fw-bold: 700;
 
+//Font family
+$sans-serif: 'Arima Madurai', sans-serif;
+$sans-serif2: 'Open Sans', sans-serif;
+
 .fw-medium {
 	font-weight: $fw-medium;
+}
+
+.sans-serif {
+ font-family: 'Arima Madurai', sans-serif;
+}
+
+.sans-serif2 {
+ font-family: 'Open Sans', sans-serif; 
 }

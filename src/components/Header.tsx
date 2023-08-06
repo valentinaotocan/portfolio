@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 function Header() {
   const isActive = true; 
   return (
-    <nav className="header ptb-xl txt-color-secondary fw-medium">
+    <nav className="header ptb-xl txt-color-secondary fw-medium sans-serif">
       <NavLink to="/" className="mr-xl underline">
         Naslovna
       </NavLink>

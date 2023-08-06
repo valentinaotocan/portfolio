@@ -9,6 +9,7 @@
 @import './pages/Home';
 @import './pages/About';
 @import './pages/Project';
+@import './pages/Contact';
 
 @import './components/Header';
 @import './components/Slider';
@@ -43,7 +44,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, a {
+h1, h2, h3 {
  font-family: 'Arima Madurai', sans-serif;
 }
 
@@ -54,6 +55,7 @@ p, li {
 a {
   text-decoration: none;
   color: inherit;
+  font-family: inherit;
 }
 
 input, button, textarea, select {

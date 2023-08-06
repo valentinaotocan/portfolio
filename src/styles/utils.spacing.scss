@@ -15,11 +15,6 @@ $spacer: 0.5rem;
   padding-top: ($spacer * 2);
 }
 
-// padding right
-.pr-sm {
-  padding-right: ($spacer * 1.5);
-}
-
 // padding-bottom
 .pb-xxs {
   padding-bottom: ($spacer * 0.5);
@@ -64,6 +59,12 @@ $spacer: 0.5rem;
 }
 
 // margin-right
+.mr-xs {
+  margin-right: ($spacer * 1);
+}
+.mr-sm {
+  margin-right: ($spacer * 1.5);
+}
 .mr-xl {
   margin-right: ($spacer * 4);
 }

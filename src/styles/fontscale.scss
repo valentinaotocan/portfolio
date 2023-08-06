@@ -27,7 +27,6 @@ $modularscale: (
   ),
 );
 
-
 .fs-base {
   @include ms-respond(font-size, 0);
   line-height: 1.7;
