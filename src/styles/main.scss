@@ -1,8 +1,8 @@
 @import 'fontscale';
 @import 'colors';
 @import 'functions';
+@import 'globals';
 @import 'utils.spacing';
-@import 'underline-hover';
 @import 'utils.text';
 @import 'button';
 @import 'circles';
@@ -17,102 +17,6 @@
 @import './components/Footer';
 @import './components/Loader';
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-  -webkit-tap-highlight-color: transparent;
-}
 
-*::before, *::after {
-  box-sizing: border-box;
-}
-
-html {
-  text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  background: $primary-color;
-  font-size: ms(0);
-  line-height: 1.7;
-  overflow-x: hidden;
-  // Improve text rendering
-  -webkit-font-smoothing: antialiased;
-}
-
-h1, h2, h3 {
- font-family: 'Arima Madurai', sans-serif;
-}
-
-p, li {
- font-family: 'Open Sans', sans-serif; 
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-  font-family: inherit;
-}
-
-input, button, textarea, select {
-  font: inherit;
-}
-
-img {
-  display: inline-block;
-  max-width: 100%;
-  height: auto;
-}
-
-.img-contain {
-  object-fit: contain;
-}
-
-// utilities
-.border-img {
-  border-radius: 40%;
-}
-
-.png-w {
-  width: toRem(80px);
-}
-
-.pos-r {
-  position: relative;
-}
-
-.pos-a {
-  position: absolute;
-}
-
-.section {
-  position: relative;
-  &--first {
-    margin-top: toRem(40px);
-    @media (max-width: toRem(1024px)) {
-      margin-top: 0;
-    }
-  }
-}
-
-.error {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  place-content: center;
-  text-align: center;
-  padding-left: toRem(24px);
-  padding-right: toRem(24px);
-
-  img {
-    width: 200px;
-    margin: 0 auto toRem(26px);
-  }
-}
 
 
