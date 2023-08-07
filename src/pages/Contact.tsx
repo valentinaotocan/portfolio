@@ -4,6 +4,8 @@ import pigeon from "../assets/images/icons/pigeon.png";
 import { BsFacebook, BsLinkedin, BsInstagram } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
 import { FaMobileScreen } from "react-icons/fa6";
+import { motion } from "framer-motion";
+import { fromTop } from "../Animation";
 
 
 function Contact() {
@@ -12,11 +14,21 @@ function Contact() {
     <section className="section contact plr-custom">
       <div className="circle linear-bg pos-a"></div>
       <div className="circle--xs-top linear-bg pos-a"></div>
-      <img src={pigeon} className="contact__image-pigeon png-w pos-a" alt="Pigeon" />
-      <img
+      <motion.img
+        src={pigeon}
+        className="contact__image-pigeon png-w pos-a"
+        alt="Pigeon"
+        variants={fromTop}
+        initial="hidden"
+        animate="visible"
+      />
+      <motion.img
         src={bottle}
         className="contact__image-bottle png-w pos-a"
         alt="Message in a bottle"
+        variants={fromTop}
+        initial="hidden"
+        animate="visible"
       />
       <div className="contact__box linear-bg fs-base sans-serif2 txt-color-primary">
         <div className="contact__box__row">
@@ -56,7 +68,7 @@ function Contact() {
             <BsInstagram size={19} />
           </a>
           <a
-            href="https://www.linkedin.com/in/valentina-otočan-5077a4218/"
+            href="https://www.linkedin.com/in/valentina-otocan/"
             rel="external"
             target="_blank"
             className="social"
