@@ -11,8 +11,8 @@ function Home() {
   useTitle('Naslovna');
   return (
     <section className="home plr-small">
-      <div className="home__circle linear-bg"></div>
-      <div className="home__circle--smaller linear-bg"></div>
+      <div className="circle pos-a linear-bg"></div>
+      <div className="circle--xs-top pos-a linear-bg"></div>
       <div className="home__picture">
         <motion.img
           src={valentinaOtocan}
@@ -24,7 +24,7 @@ function Home() {
         />
         <motion.img
           src={pet}
-          className="home__picture__pet img-contain png-w"
+          className="home__picture__pet img-contain png-w pos-a"
           alt="Pet"
           variants={fromTop}
           initial="hidden"
@@ -32,7 +32,7 @@ function Home() {
         />
         <motion.img
           src={work}
-          className="home__picture__work img-contain png-w"
+          className="home__picture__work img-contain png-w pos-a"
           alt="Work"
           variants={fromTop}
           initial="hidden"
@@ -40,7 +40,7 @@ function Home() {
         />
         <motion.img
           src={ecology}
-          className="home__picture__ecology img-contain png-w"
+          className="home__picture__ecology img-contain png-w pos-a"
           alt="Ecology"
           variants={fromTop}
           initial="hidden"

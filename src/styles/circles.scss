@@ -1,0 +1,23 @@
+.circle {
+  width: toRem(250px);
+  height: toRem(250px);
+  border-radius: 100% 0 0 0;
+  bottom: 0;
+  right: 0;
+  &--xs-top {
+    border-radius: 0 0 100% 0;
+    width: toRem(150px);
+    height: toRem(150px);
+    top: 0;
+    left: 0;
+    z-index: 500;
+  }
+  @media (max-width: toRem(1024px)) {
+    width: toRem(150px);
+    height: toRem(150px);
+    &--xs-top {
+      width: toRem(100px);
+      height: toRem(100px);
+    }
+  }
+}

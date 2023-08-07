@@ -10,12 +10,12 @@ function Contact() {
   useTitle("Kontakt");
   return (
     <section className="section contact plr-custom">
-      <div className="contact__circle-top linear-bg"></div>
-      <div className="contact__circle-bottom linear-bg"></div>
-      <img src={pigeon} className="contact__image-pigeon png-w" alt="Pigeon" />
+      <div className="circle linear-bg pos-a"></div>
+      <div className="circle--xs-top linear-bg pos-a"></div>
+      <img src={pigeon} className="contact__image-pigeon png-w pos-a" alt="Pigeon" />
       <img
         src={bottle}
-        className="contact__image-bottle png-w"
+        className="contact__image-bottle png-w pos-a"
         alt="Message in a bottle"
       />
       <div className="contact__box linear-bg fs-base sans-serif2 txt-color-primary">
