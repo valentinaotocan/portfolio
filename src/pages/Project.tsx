@@ -5,7 +5,7 @@ import exclamation from '../assets/images/icons/exclamation-mark.png';
 interface Post {
   html_url: string;
   name: string;
-  description: string | [];
+  description: string | null;
   topics: string[];
   language: string;
   created_at: string;
