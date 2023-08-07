@@ -67,7 +67,8 @@ function Project() {
   }
 
   return (
-    <section className="section section--first ptb-custom plr-custom">
+    <section className="section--first ptb-custom plr-custom">
+      <div className="circle--xs-top pos-a linear-bg"></div>
       <h1 className="fs-xl pb-sm">Github projekti</h1>
       <div className="cards">
         {posts.map((post) => {
@@ -75,11 +76,11 @@ function Project() {
             <div key={post.name} className="cards__card">
               <div>
                 <h2>Ime projekta: {post.name}</h2>
-                <p>
+                <p className="ellipsis ellipsis--3">
                   <span className="fw-semiBold">Opis projekta: </span>
                   {post.description !== null ? post.description : "Nema"}
                 </p>
-                <p>
+                <p className="ellipsis">
                   <span className="fw-semiBold">Tagovi: </span>
                   {post.topics.length > 0 ? post.topics.join(", ") : "Nema"}
                 </p>
