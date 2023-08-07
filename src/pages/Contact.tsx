@@ -5,7 +5,7 @@ import { BsFacebook, BsLinkedin, BsInstagram } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
 import { FaMobileScreen } from "react-icons/fa6";
 import { motion } from "framer-motion";
-import { fromTop } from "../Animation";
+import { fromOpacity, fromTop } from "../Animation";
 
 
 function Contact() {
@@ -30,7 +30,12 @@ function Contact() {
         initial="hidden"
         animate="visible"
       />
-      <div className="contact__box linear-bg fs-base sans-serif2 txt-color-primary">
+      <motion.div
+        className="contact__box linear-bg fs-base sans-serif2 txt-color-primary"
+        variants={fromOpacity}
+        initial="hidden"
+        animate="visible"
+      >
         <div className="contact__box__row">
           <FiMail className="mr-xs icon-mail" size={20} />
           <a
@@ -76,7 +81,7 @@ function Contact() {
             <BsLinkedin size={18} />
           </a>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }
