@@ -1,16 +1,17 @@
 // Font weights
-$fw-thin: 100;
-$fw-light: 300;
 $fw-normal: 400;
 $fw-medium: 500;
+$fw-semiBold: 600;
 $fw-bold: 700;
-
 //Font family
 $sans-serif: 'Arima Madurai', sans-serif;
 $sans-serif2: 'Open Sans', sans-serif;
 
 .fw-medium {
 	font-weight: $fw-medium;
+}
+.fw-semiBold {
+	font-weight: $fw-semiBold;
 }
 
 .sans-serif {

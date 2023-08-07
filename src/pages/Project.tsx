@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Loader from "../components/Loader";
-import exclamation from '../assets/images/icons/exclamation-mark.png';
+import exclamation from "../assets/images/icons/exclamation-mark.png";
 
 interface Post {
   html_url: string;
@@ -67,7 +67,7 @@ function Project() {
   }
 
   return (
-    <section className="ptb-custom plr-custom">
+    <section className="section section--first ptb-custom plr-custom">
       <h1 className="fs-xl pb-sm">Github projekti</h1>
       <div className="cards">
         {posts.map((post) => {
@@ -76,18 +76,24 @@ function Project() {
               <div>
                 <h2>Ime projekta: {post.name}</h2>
                 <p>
-                  Opis projekta:{" "}
+                  <span className="fw-semiBold">Opis projekta: </span>
                   {post.description !== null ? post.description : "Nema"}
                 </p>
                 <p>
-                  Tagovi:{" "}
+                  <span className="fw-semiBold">Tagovi: </span>
                   {post.topics.length > 0 ? post.topics.join(", ") : "Nema"}
                 </p>
-                <p>Najviše prevladava: {post.language}</p>
-                <p>Stvoreno: {formatDate(post.created_at)}</p>
+                <p>
+                  <span className="fw-semiBold">Najviše prevladava: </span>
+                  {post.language}
+                </p>
+                <p>
+                  <span className="fw-semiBold">Stvoreno: </span>{" "}
+                  {formatDate(post.created_at)}
+                </p>
               </div>
               <a href={post.html_url}>
-                <button type="button" className="btn linear-bg">
+                <button type="button" className="btn linear-bg sans-serif2">
                   Vidi više
                 </button>
               </a>
