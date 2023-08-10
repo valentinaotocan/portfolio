@@ -9,6 +9,9 @@ function Header() {
       <NavLink to="/o-meni" className="mr-xl underline">
         O meni
       </NavLink>
+      <NavLink to="/iskustvo" className="mr-xl underline">
+        Iskustvo
+      </NavLink>
       <NavLink to="/projekti" className="mr-xl underline">
         Projekti
       </NavLink>
