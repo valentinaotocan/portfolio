@@ -1,10 +1,11 @@
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
-import NotFound from "./pages/NotFound";
-import Project from "./pages/Project";
 import Layout from "./components/Layout";
 import HomeLayout from "./components/HomeLayout";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Experience from "./pages/Experience";
+import Project from "./pages/Project";
+import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         </Route>
         <Route element={<Layout />}>
           <Route path="/o-meni" element={<About />} />
+          <Route path="/iskustvo" element={<Experience />} />
           <Route path="/projekti" element={<Project />} />
           <Route path="/kontakt" element={<Contact />} />
         </Route>
