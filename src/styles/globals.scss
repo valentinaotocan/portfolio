@@ -2,8 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  -webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
+  -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -69,6 +69,20 @@ img {
 .pos-a {
   position: absolute;
 }
+
+.centered-text {
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  &--align-items {
+    align-items: center;
+  }
+}
+
+.align-items
+
 
 .error {
   display: flex;

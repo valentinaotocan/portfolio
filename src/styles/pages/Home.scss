@@ -1,12 +1,8 @@
 .home {
-  display: flex;
-  align-items: center;
-  text-align: center;
   min-height: 100vh;
   height: 100%;
   overflow-y: hidden;
   &__picture {
-    position: relative;
     width: 50%;
     padding-top: toRem(30px);
     &__me {
@@ -56,6 +52,9 @@
     &__picture {
       padding-top: 0;
       width: 65%;
+      &__me {
+      max-height: 50vh;
+    }
       &__ecology {
         left: 2%;
       }
@@ -64,7 +63,7 @@
       }
     }
     &__text {
-      padding-top: toRem(30px);
+      padding-top: toRem(40px);
       width: 100%;
       padding-left: 0;
     }
@@ -85,8 +84,7 @@
         display: none;
       }
       &__pet {
-        bottom: toRem(-200px);
-        left: 5%;
+        display: none;
       }
       &__work {
         right: -1%;

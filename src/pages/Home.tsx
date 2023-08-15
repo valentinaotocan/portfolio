@@ -10,10 +10,10 @@ import ecology from "../assets/images/icons/ecology.png";
 function Home() {
   useTitle('Naslovna');
   return (
-    <section className="home plr-small">
+    <section className="home flex flex--align-items centered-text plr-small">
       <div className="circle"></div>
       <div className="circle circle--top-left"></div>
-      <div className="home__picture">
+      <div className="home__picture pos-r">
         <motion.img
           src={valentinaOtocan}
           className="home__picture__me img-contain border-img"
