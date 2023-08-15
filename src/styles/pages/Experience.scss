@@ -1,0 +1,108 @@
+.knowledge {
+  display: flex;
+  &__icon-html {
+    position: absolute;
+    z-index: 1;
+    bottom: toRem(22px);
+    left: 17%;
+  }
+  &__text {
+    width: 50%;
+    &__items {
+      display: flex;
+    }
+  }
+  &__image {
+    width: 50%;
+  }
+}
+
+.learning {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  &__icon-brain {
+    position: absolute;
+    bottom: 0px;
+    right: 17%;
+  }
+  &__text {
+    max-width: toRem(552px);
+  }
+}
+
+.experience {
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    &__text {
+      width: 50%;
+    }
+    &__image {
+      width: 50%;
+      .blur {
+        filter: blur(3px);
+        -webkit-filter: blur(3px);
+      }
+    }
+    .icon-flex {
+      display: flex;
+      justify-content: center;
+      padding-top: toRem(50px);
+    }
+  }
+}
+
+// responsive
+@media (max-width: toRem(1360px)) {
+  .experience__wrap__text,
+  .knowledge__text {
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: toRem(1024px)) {
+  .knowledge {
+    flex-direction: column;
+    &__icon-html {
+      bottom: toRem(-5px);
+    }
+    &__text {
+      width: 100%;
+      padding-bottom: toRem(70px);
+    }
+    &__image {
+      width: 100%;
+    }
+  }
+  .experience__wrap__text,
+  .knowledge__text {
+    padding-right: 0;
+  }
+  .w-rsp {
+    width: 1000px;
+  }
+  .experience__wrap {
+    flex-direction: column;
+    &__text {
+      width: 100%;
+      padding-bottom: toRem(70px);
+    }
+    &__image {
+      width: 100%;
+    }
+    .icon-flex {
+      padding-top: toRem(16px);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .knowledge__text__items {
+    .ml-6xl {
+      margin-left: 42px;
+    }
+  }
+}

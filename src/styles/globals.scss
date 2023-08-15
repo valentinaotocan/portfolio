@@ -70,16 +70,6 @@ img {
   position: absolute;
 }
 
-.section {
-  position: relative;
-  &--first {
-    margin-top: toRem(40px);
-    @media (max-width: toRem(1024px)) {
-      margin-top: 0;
-    }
-  }
-}
-
 .error {
   display: flex;
   flex-direction: column;

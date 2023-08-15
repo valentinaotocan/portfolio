@@ -1,13 +1,5 @@
 .about-me {
   display: flex;
-  &__circle {
-    position: absolute;
-    width: toRem(340px);
-    height: toRem(170px);
-    left: 12%;
-    bottom: 0;
-    border-radius: toRem(180px) toRem(180px) 0 0;
-  }
   &__icon-skills {
     display: none;
   }
@@ -39,23 +31,6 @@
 }
 
 .hobby {
-  &__circle-top {
-    width: 200px;
-    height: 100px;
-    border-radius: 0 0 110px 110px;
-    position: absolute;
-    top: 0;
-    right: 8%;
-  }
-  &__circle-bottom {
-    width: 100px;
-    height: 100px;
-    border-radius: 0 100% 0 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-  }
-
   .icon-book {
     top: 5px;
     right: -40%;
@@ -110,11 +85,6 @@
       display: flex;
       justify-content: center;
     }
-    &__circle {
-      width: 200px;
-      height: 100px;
-      border-radius: 110px 110px 0 0;
-    }
   }
 }
 
@@ -129,11 +99,6 @@
 
 @media (max-width: 500px) {
   .about-me {
-    &__circle {
-      width: 130px;
-      height: 70px;
-      border-radius: 100px 100px 0 0;
-    }
     &__text__virtues {
       .ml-6xl {
         margin-left: 42px;

@@ -11,9 +11,9 @@ import { fromOpacity, fromTop } from "../Animation";
 function Contact() {
   useTitle("Kontakt");
   return (
-    <section className="section contact plr-custom">
-      <div className="circle linear-bg pos-a"></div>
-      <div className="circle--xs-top linear-bg pos-a"></div>
+    <section className="pos-r contact plr-custom">
+      <div className="circle"></div>
+      <div className="circle circle--top-left"></div>
       <motion.img
         src={pigeon}
         className="contact__image-pigeon png-w pos-a"

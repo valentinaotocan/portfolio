@@ -94,6 +94,9 @@ $spacer: 0.5rem;
 .ptb-custom {
   padding-top: toRem(130px);
   padding-bottom: toRem(130px);
+  &--first {
+    padding-top: toRem(170px);
+  }
 }
 
 .plr-small {
@@ -126,8 +129,8 @@ $spacer: 0.5rem;
     padding-left: 0;
   } 
   .ptb-custom {
-    padding-top: 100px;
-    padding-bottom: 100px; 
+    padding-top: toRem(120px);
+    padding-bottom: toRem(120px); 
   }
 }
 

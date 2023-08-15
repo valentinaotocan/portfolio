@@ -15,8 +15,9 @@ function About() {
   useTitle("O meni");
   return (
     <>
-      <section className="section section--first about-me ptb-custom plr-custom">
-        <div className="about-me__circle linear-bg"></div>
+      <section className="pos-r about-me ptb-custom ptb-custom--first plr-custom">
+        <div className="circle circle--top-left circle--top-left--small"></div>
+        <div className="circle circle--semicircle-left"></div>
         <motion.img
           src={skills}
           className="about-me__icon-skills png-w"
@@ -66,7 +67,7 @@ function About() {
         </div>
       </section>
 
-      <section className="section frontend ptb-custom linear-bg plr-custom txt-color-primary">
+      <section className="pos-r frontend ptb-custom linear-bg plr-custom txt-color-primary">
         <motion.img
           src={coding}
           loading="lazy"
@@ -103,9 +104,8 @@ function About() {
         </div>
       </section>
 
-      <section className="section hobby ptb-custom plr-custom">
-        <div className="hobby__circle-top linear-bg"></div>
-        <div className="hobby__circle-bottom linear-bg"></div>
+      <section className="pos-r hobby ptb-custom plr-custom">
+        <div className="circle circle--semicircle-right"></div>
         <div className="mw-550">
           <h2 className="fs-xl pb-sm">Hobi</h2>
           <div className="pos-r">

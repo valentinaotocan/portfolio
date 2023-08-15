@@ -11,8 +11,8 @@ function Home() {
   useTitle('Naslovna');
   return (
     <section className="home plr-small">
-      <div className="circle pos-a linear-bg"></div>
-      <div className="circle--xs-top pos-a linear-bg"></div>
+      <div className="circle"></div>
+      <div className="circle circle--top-left"></div>
       <div className="home__picture">
         <motion.img
           src={valentinaOtocan}

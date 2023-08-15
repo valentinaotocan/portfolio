@@ -67,8 +67,9 @@ function Project() {
   }
 
   return (
-    <section className="section--first ptb-custom plr-custom">
-      <div className="circle--xs-top pos-a linear-bg"></div>
+    <section className="pos-r ptb-custom ptb-custom--first plr-custom">
+      <div className="circle circle--top-left"></div>
+      <div className="circle"></div>
       <h1 className="fs-xl pb-sm">Github projekti</h1>
       <div className="cards">
         {posts.map((post) => {
