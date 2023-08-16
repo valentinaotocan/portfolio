@@ -1,0 +1,29 @@
+.flex {
+	display: flex;
+}
+
+// Flex direction
+.flex-fd--c {
+	flex-direction: column;
+}
+
+// Flex wrap
+.flex-fw--w {
+	flex-wrap: wrap;
+}
+
+// Justify content
+.flex-jc--fe {
+	justify-content: flex-end;
+}
+.flex-jc--c {
+	justify-content: center;
+}
+.flex-jc--sb {
+	justify-content: space-between;
+}
+
+// Align items
+.flex-ai--c {
+	align-items: center;
+}

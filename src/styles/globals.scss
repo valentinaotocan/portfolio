@@ -86,13 +86,6 @@ img {
   text-align: center;
 }
 
-.flex {
-  display: flex;
-  &--align-items {
-    align-items: center;
-  }
-}
-
 .align-items .error {
   display: flex;
   flex-direction: column;
