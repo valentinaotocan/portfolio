@@ -12,6 +12,8 @@
     top: 50%;
     cursor: pointer;
     color: $secondary-color;
+    background: $primary-color;
+    border-radius: 50%;
     font-size: toRem(36px);
     &--left {
       left: 5%;
@@ -19,9 +21,12 @@
     &--right {
       right: 5%;
     }
+    @media(max-width: toRem(768px)) {
+      display: none;
+    }
   }
   .dots {
-    bottom: toRem(10px);
+    bottom: toRem(26px);
     left: 50%;
     transform: translateX(-50%);
 

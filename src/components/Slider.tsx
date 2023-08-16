@@ -3,6 +3,7 @@ import {
   BsFillArrowLeftCircleFill,
   BsFillArrowRightCircleFill,
 } from "react-icons/bs";
+import { useSwipeable } from "react-swipeable";
 import turtle from "../assets/images/turtle.jpeg";
 import daisy from "../assets/images/daisy.jpg";
 import mountain from "../assets/images/mountain.jpeg";
@@ -51,9 +52,15 @@ function Slider() {
     setSlideIndex(index);
   };
 
+  // Handle swiping left and right
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => nextSlide(),
+    onSwipedRight: () => prevSlide(),
+  });
+
   return (
-    <div className="slider pos-r">
-      <div className='slide'>
+    <div className="slider pos-r" {...swipeHandlers}>
+      <div className="slide">
         <img src={images[slideIndex].src} alt={images[slideIndex].title} />
       </div>
       <BsFillArrowLeftCircleFill
