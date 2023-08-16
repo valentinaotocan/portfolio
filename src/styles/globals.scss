@@ -3,11 +3,12 @@
   padding: 0;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
 }
 
-*::before, *::after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -24,14 +25,20 @@ body {
   overflow-x: hidden;
   // Improve text rendering
   -webkit-font-smoothing: antialiased;
+  &.menu-open {
+    overflow: hidden;
+  }
 }
 
-h1, h2, h3 {
- font-family: 'Arima Madurai', sans-serif;
+h1,
+h2,
+h3 {
+  font-family: "Arima Madurai", sans-serif;
 }
 
-p, li {
- font-family: 'Open Sans', sans-serif; 
+p,
+li {
+  font-family: "Open Sans", sans-serif;
 }
 
 a {
@@ -40,7 +47,10 @@ a {
   font-family: inherit;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
@@ -81,10 +91,7 @@ img {
   }
 }
 
-.align-items
-
-
-.error {
+.align-items .error {
   display: flex;
   flex-direction: column;
   height: 100vh;

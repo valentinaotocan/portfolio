@@ -5,10 +5,13 @@ import { IoCloseSharp, IoReorderThreeSharp } from "react-icons/io5";
 function Header() {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
 
-  const isActive = true; 
-
   const toggleMenu = () => {
     setIsMenuOpened(!isMenuOpened);
+    if (!isMenuOpened) {
+      document.body.classList.add("menu-open");
+    } else {
+      document.body.classList.remove("menu-open");
+    }
   };
 
   return (
