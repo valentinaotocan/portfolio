@@ -15,7 +15,7 @@ function Header() {
   };
 
   return (
-    <nav className="header ptb-xl txt-color-secondary fw-medium sans-serif">
+    <nav className="header ptb-xl txt-color-secondary fw-semiBold sans-serif">
       <div
         className={`header__nav ${isMenuOpened ? "open" : ""}`}
         onClick={toggleMenu}
