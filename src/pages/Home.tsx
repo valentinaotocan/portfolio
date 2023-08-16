@@ -10,7 +10,7 @@ import ecology from "../assets/images/icons/ecology.png";
 function Home() {
   useTitle('Naslovna');
   return (
-    <section className="home flex flex--align-items centered-text plr-small">
+    <section className="home flex flex-ai--c text-center plr-small">
       <div className="circle"></div>
       <div className="circle circle--top-left"></div>
       <div className="home__picture pos-r">
