@@ -52,7 +52,7 @@ function Slider() {
   };
 
   return (
-    <div className="slider">
+    <div className="slider pos-r">
       <div className='slide'>
         <img src={images[slideIndex].src} alt={images[slideIndex].title} />
       </div>
@@ -64,7 +64,7 @@ function Slider() {
         className="arrow arrow--right"
         onClick={nextSlide}
       />
-      <div className="dots">
+      <div className="dots pos-a flex flex-ai--c flex-jc--c">
         {images.map((image, index) => (
           <div
             key={index}

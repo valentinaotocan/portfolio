@@ -1,7 +1,4 @@
 .loader {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   &__circle {
     width: toRem(80px);

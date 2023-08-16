@@ -1,11 +1,10 @@
 .slider {
   width: 100%;
   height: 100%;
-  position: relative;
   overflow: hidden;
   .slide {
-    max-width: 750px;
-    max-height: 563px;
+    max-width: toRem(750px);
+    max-height: toRem(563px);
     margin: 0 auto;
   }
   .arrow {
@@ -13,7 +12,7 @@
     top: 50%;
     cursor: pointer;
     color: $secondary-color;
-    font-size: 36px;
+    font-size: toRem(36px);
     &--left {
       left: 5%;
     }
@@ -22,21 +21,17 @@
     }
   }
   .dots {
-    position: absolute;
-    bottom: 10px;
+    bottom: toRem(10px);
     left: 50%;
     transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     .dot {
-      width: 12px;
-      height: 12px;
+      width: toRem(12px);
+      height: toRem(12px);
       border-radius: 50%;
       background-color: #000;
       opacity: 0.5;
-      margin: 0 5px;
+      margin: 0 toRem(5px);
       cursor: pointer;
 
       &.active {
