@@ -26,7 +26,9 @@ body {
   // Improve text rendering
   -webkit-font-smoothing: antialiased;
   &.menu-open {
-    overflow: hidden;
+    @media(max-width: toRem(1024px)) {
+      overflow: hidden;
+    }
   }
 }
 
