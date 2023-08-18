@@ -58,7 +58,7 @@ function About() {
           <motion.img
             src={profile}
             loading="lazy"
-            className="about-me__img__profile img-contain border-img"
+            className="about-me__img__profile img-contain"
             alt="Profile"
             variants={fromOpacity}
             initial="hidden"
