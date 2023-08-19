@@ -1,7 +1,4 @@
 .about-me {
-  &__icon-skills {
-    display: none;
-  }
   &__text {
     width: 50%;
     &__virtues {
@@ -10,56 +7,15 @@
   }
   &__img {
     width: 50%;
-  }
-}
-
-.frontend {
-  &__icon-puzzle {
-    bottom: -44px;
-    right: 11%;
-    z-index: 1;
-  }
-}
-
-.hobby {
-  .icon-book {
-    top: 5px;
-    right: -40%;
-    @media (max-width: 1000px) {
-      display: none;
-    }
-  }
-  .icon-nature {
-    top: 5px;
-    right: -60%;
-    @media (max-width: 1024px) {
-      display: none;
-    }
-  }
-  .icon-succulent {
-    top: 5px;
-    right: -80%;
-    @media (max-width: 1024px) {
-      display: none;
-    }
-  }
-}
-
-@media (max-width: 1200px) {
-  .about-me__text {
-    padding-right: 5%;
-  }
-}
-
-@media (max-width: 1024px) {
-  .about-me {
-    flex-direction: column;
     &__icon-skills {
-      display: block;
-      position: absolute;
-      right: 17%;
-      top: 200px;
+      top: toRem(-30px);
+      right: 10%;
+      background: $primary-color;
+      border-radius: 50%;
     }
+  }
+  @media (max-width: toRem(1024px)) {
+    flex-direction: column;
     &__text {
       width: 100%;
       padding-right: 0;
@@ -69,13 +25,51 @@
       width: 100%;
       display: flex;
       justify-content: center;
+      &__icon-skills {
+        right: 3%;
+        top: -195px;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    &__img {
+      &__icon-skills {
+        display: none;
+      }
+    }
+  }
+  @media (max-width: 425px) {
+    &__text__virtues {
+      flex-direction: column;
     }
   }
 }
 
-@media (max-width: 800px) {
-  .about-me__icon-skills {
-    display: none;
+.frontend {
+  &__icon-puzzle {
+    bottom: toRem(-44px);
+    right: 11%;
+    z-index: 1;
+  }
+}
+
+.hobby {
+  .icon-book,
+  .icon-nature,
+  .icon-succulent {
+    top: toRem(5px);
+    @media (max-width: toRem(1205px)) {
+      display: none;
+    }
+  }
+  .icon-book {
+    right: -45%;
+  }
+  .icon-nature {
+    right: -65%;
+  }
+  .icon-succulent {
+    right: -85%;
   }
 }
 

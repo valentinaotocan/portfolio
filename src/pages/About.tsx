@@ -17,15 +17,7 @@ function About() {
       <section className="pos-r about-me flex ptb-custom ptb-custom--first plr-custom">
         <div className="circle circle--top-left circle--top-left--small"></div>
         <div className="circle circle--semicircle-left"></div>
-        <motion.img
-          src={skills}
-          className="about-me__icon-skills png-w"
-          variants={fromTop}
-          initial="hidden"
-          animate="visible"
-          alt="Skills"
-        />
-        <div className="about-me__text">
+        <div className="about-me__text pr-5">
           <h1 className="fs-xl pb-sm">Kratko o meni</h1>
           <div className="about-me__text__virtues mw-550 fs-base">
             <ul className="ml-lg">
@@ -44,7 +36,7 @@ function About() {
             </ul>
           </div>
         </div>
-        <div className="about-me__img pl-5">
+        <div className="about-me__img pos-r pl-5">
           <motion.img
             src={profile}
             loading="lazy"
@@ -53,6 +45,14 @@ function About() {
             variants={fromOpacity}
             initial="hidden"
             animate="visible"
+          />
+          <motion.img
+            src={skills}
+            className="about-me__img__icon-skills pos-a png-w"
+            variants={fromTop}
+            initial="hidden"
+            animate="visible"
+            alt="Skills"
           />
         </div>
       </section>
