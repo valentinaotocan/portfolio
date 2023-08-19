@@ -1,9 +1,5 @@
 .about-me {
-  display: flex;
   &__icon-skills {
-    display: none;
-  }
-  &__icon-handshake {
     display: none;
   }
   &__text {
@@ -18,12 +14,7 @@
 }
 
 .frontend {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
   &__icon-puzzle {
-    position: absolute;
     bottom: -44px;
     right: 11%;
     z-index: 1;
@@ -63,12 +54,6 @@
 @media (max-width: 1024px) {
   .about-me {
     flex-direction: column;
-    &__icon-handshake {
-      display: block;
-      position: absolute;
-      bottom: 83px;
-      left: 6%;
-    }
     &__icon-skills {
       display: block;
       position: absolute;
@@ -92,17 +77,5 @@
   .about-me__icon-skills {
     display: none;
   }
-  .about-me__icon-handshake {
-    display: none;
-  }
 }
 
-@media (max-width: 500px) {
-  .about-me {
-    &__text__virtues {
-      .ml-6xl {
-        margin-left: 42px;
-      }
-    }
-  }
-}

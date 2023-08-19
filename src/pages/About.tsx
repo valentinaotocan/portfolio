@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { fromOpacity, fromTop } from "../Animation";
 import useTitle from "../hooks/useTitle";
 import skills from "../assets/images/icons/skills.png";
-import handshake from "../assets/images/icons/handshake.png";
 import profile from "../assets/images/profile.jpeg";
 import coding from "../assets/images/icons/coding.png";
 import puzzle from "../assets/images/icons/puzzle.png";
@@ -15,7 +14,7 @@ function About() {
   useTitle("O meni");
   return (
     <>
-      <section className="pos-r about-me ptb-custom ptb-custom--first plr-custom">
+      <section className="pos-r about-me flex ptb-custom ptb-custom--first plr-custom">
         <div className="circle circle--top-left circle--top-left--small"></div>
         <div className="circle circle--semicircle-left"></div>
         <motion.img
@@ -25,15 +24,6 @@ function About() {
           initial="hidden"
           animate="visible"
           alt="Skills"
-        />
-        <motion.img
-          src={handshake}
-          loading="lazy"
-          className="about-me__icon-handshake png-w"
-          alt="Handshake"
-          variants={fromTop}
-          initial="hidden"
-          animate="visible"
         />
         <div className="about-me__text">
           <h1 className="fs-xl pb-sm">Kratko o meni</h1>
@@ -67,7 +57,7 @@ function About() {
         </div>
       </section>
 
-      <section className="pos-r frontend ptb-custom linear-bg plr-custom txt-color-primary">
+      <section className="pos-r frontend flex text-center flex-fd--c flex-ai--c ptb-custom linear-bg plr-custom txt-color-primary">
         <motion.img
           src={coding}
           loading="lazy"
@@ -81,7 +71,7 @@ function About() {
         <motion.img
           src={puzzle}
           loading="lazy"
-          className="frontend__icon-puzzle png-w"
+          className="frontend__icon-puzzle pos-a png-w"
           alt="Puzzle"
           variants={fromTop}
           initial="hidden"
