@@ -11,7 +11,7 @@ import { fromOpacity, fromTop } from "../Animation";
 function Contact() {
   useTitle("Kontakt");
   return (
-    <section className="pos-r contact plr-custom">
+    <section className="pos-r contact flex flex-jc--c flex-ai--c plr-custom">
       <div className="circle"></div>
       <div className="circle circle--top-left"></div>
       <motion.img
@@ -31,12 +31,12 @@ function Contact() {
         animate="visible"
       />
       <motion.div
-        className="contact__box linear-bg fs-base sans-serif2 txt-color-primary"
+        className="contact__box flex flex-fd--c flex-ai--c text-center linear-bg fs-base sans-serif2 txt-color-primary"
         variants={fromOpacity}
         initial="hidden"
         animate="visible"
       >
-        <div className="contact__box__row">
+        <div className="contact__box__row flex flex-ai--c">
           <FiMail className="mr-xs icon-mail" size={20} />
           <a
             href="mailto:valentinaotocan@gmail.com"
