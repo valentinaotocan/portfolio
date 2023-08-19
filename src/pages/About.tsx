@@ -49,10 +49,11 @@ function About() {
           <motion.img
             src={skills}
             className="about-me__img__icon-skills pos-a png-w"
-            variants={fromTop}
-            initial="hidden"
-            animate="visible"
             alt="Skills"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fromTop}
           />
         </div>
       </section>

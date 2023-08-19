@@ -5,16 +5,22 @@ import nextLevel from "../assets/images/icons/next-level.png";
 import brainProcess from "../assets/images/icons/brain-process.png";
 import brain from "../assets/images/icons/brain.png";
 import screen from "../assets/images/screen.jpg";
+import { motion } from "framer-motion";
+import { fromTop } from "../Animation";
 
 function Experience() {
   useTitle("Iskustvo");
   return (
     <>
       <section className="pos-r knowledge flex ptb-custom ptb-custom--first plr-custom">
-        <img
+        <motion.img
           src={html}
-          className="knowledge__icon-html pos-a img-contain png-w fromTop"
+          className="knowledge__icon-html pos-a img-contain png-w"
           alt="Html"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fromTop}
         />
         <div className="circle circle--top-left"></div>
         <div className="circle circle--semicircle-left"></div>
@@ -36,26 +42,34 @@ function Experience() {
           </div>
         </div>
         <div className="knowledge__image pl-5">
-          <img
+          <motion.img
             src={programming}
-            className="img-contain w-rsp fromOpacity"
+            className="img-contain w-rsp"
             alt="Programming"
           />
         </div>
       </section>
 
       <section className="pos-r learning flex flex-fd--c flex-ai--c text-center ptb-custom plr-custom linear-bg txt-color-primary">
-        <img
+        <motion.img
           src={brainProcess}
           loading="lazy"
-          className="learning__icon-process img-contain png-w fromTop"
+          className="learning__icon-process img-contain png-w"
           alt="Learning process"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fromTop}
         />
-        <img
+        <motion.img
           src={brain}
           loading="lazy"
-          className="learning__icon-brain pos-a img-contain png-w fromTop"
+          className="learning__icon-brain pos-a img-contain png-w"
           alt="Brain"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fromTop}
         />
         <h2 className="fs-xl pb-sm pt-md">Učenje</h2>
         <div className="learning__text fs-base">
@@ -90,11 +104,15 @@ function Experience() {
               Stanzia Vinella (održavanje).
             </p>
             <div className="icon-flex">
-              <img
+              <motion.img
                 src={nextLevel}
                 loading="lazy"
-                className="img-contain png-w fromTop"
+                className="img-contain png-w"
                 alt="Next level"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fromTop}
               />
             </div>
           </div>

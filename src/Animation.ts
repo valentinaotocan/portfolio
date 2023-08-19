@@ -23,7 +23,7 @@ export const fromTop = {
     transition: {
       duration: 0.6,
       cubicBezier: [0.46, 0.03, 0.52, 0.96],
-      delay: 0.25,
+      delay: 0.3,
     },
   },
 };
