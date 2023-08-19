@@ -82,7 +82,7 @@ img {
   text-align: center;
 }
 
-.align-items .error {
+.error {
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -92,7 +92,7 @@ img {
   padding-right: toRem(24px);
 
   img {
-    width: 200px;
+    width: toRem(200px);
     margin: 0 auto toRem(26px);
   }
 }
