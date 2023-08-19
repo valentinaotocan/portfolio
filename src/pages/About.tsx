@@ -15,7 +15,7 @@ function About() {
   return (
     <>
       <section className="pos-r about-me flex ptb-custom ptb-custom--first plr-custom">
-        <div className="circle circle--top-left circle--top-left--small"></div>
+        <div className="circle circle--top-left circle--top-left--smaller"></div>
         <div className="circle circle--semicircle-left"></div>
         <div className="about-me__text pr-5">
           <h1 className="fs-xl pb-sm">Kratko o meni</h1>
@@ -153,6 +153,8 @@ function About() {
         </div>
 
         <Slider />
+
+        <div className="circle circle--small"></div>
       </section>
     </>
   );

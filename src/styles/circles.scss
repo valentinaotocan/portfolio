@@ -1,64 +1,81 @@
+$xxs-size: toRem(80px);
+$xs-size: toRem(100px);
+$sm-size: toRem(150px);
+$md-size: toRem(200px);
+$lg-size: toRem(250px);
+$xl-size: toRem(280px);
+
 .circle {
   // bottom - right
   position: absolute;
   background: $linear-gradient;
-  width: toRem(250px);
-  height: toRem(250px);
+  width: $lg-size;
+  height: $lg-size;
   border-radius: 100% 0 0 0;
   bottom: 0;
   right: 0;
+  &--small {
+    width: $xs-size;
+    height: $xs-size;
+  }
   &--bottom-left {
     left: 0;
-    width: 150px;
-    height: 150px;
+    width: $md-size;
+    height: $md-size;
     border-radius: 0 100% 0 0;
   }
   &--top-left {
     top: 0;
     left: 0;
-    width: toRem(150px);
-    height: toRem(150px);
+    width: $sm-size;
+    height: $sm-size;
     border-radius: 0 0 100% 0;
     z-index: 500;
+    &--smaller {
+      width: $xs-size;
+      height: $xs-size;
+    }
   }
   &--semicircle-left {
-    width: toRem(280px);
+    width: $xl-size;
     height: toRem(140px);
     left: 12%;
     border-radius: 150px 150px 0 0;
   }
   &--top-right {
     top: 0;
-    width: toRem(100px);
-    height: toRem(100px);
+    width: $xs-size;
+    height: $xs-size;
     border-radius: 0 0 0 100%;
   }
   &--semicircle-right {
-    width: 200px;
-    height: 100px;
+    width: $md-size;
+    height: $xs-size;
     border-radius: 0 0 110px 110px;
     top: 0;
     right: 8%;
   }
   @media (max-width: toRem(1024px)) {
-    width: toRem(150px);
-    height: toRem(150px);
-    &--top-left {
-      width: toRem(100px);
-      height: toRem(100px);
-      &--small {
-        width: toRem(80px);
-        height: toRem(80px);
-      }
+    width: $sm-size;
+    height: $sm-size;
+    &--small {
+      width: $xs-size;
+      height: $xs-size;
+    }
+    &--top-left,
+    &--top-right,
+    &--bottom-left {
+      width: $xs-size;
+      height: $xs-size;
     }
     &--semicircle-left {
       width: toRem(160px);
-      height: toRem(80px);
+      height: $xxs-size;
       border-radius: 80px 80px 0 0;
     }
     &--semicircle-right {
-      width: toRem(200px);
-      height: toRem(100px);
+      width: $md-size;
+      height: $xs-size;
     }
   }
 }

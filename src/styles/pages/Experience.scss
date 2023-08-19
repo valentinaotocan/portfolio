@@ -15,6 +15,11 @@
   &__image {
     width: 50%;
   }
+  @media(max-width: toRem(425px)) {
+    &__text__items {
+      flex-direction: column;
+    }
+  }
 }
 
 .learning {
@@ -55,14 +60,6 @@
   }
 }
 
-// responsive
-@media (max-width: toRem(1360px)) {
-  .experience__wrap__text,
-  .knowledge__text {
-    padding-right: 5%;
-  }
-}
-
 @media (max-width: toRem(1024px)) {
   .knowledge {
     flex-direction: column;
@@ -99,10 +96,3 @@
   }
 }
 
-@media (max-width: 500px) {
-  .knowledge__text__items {
-    .ml-6xl {
-      margin-left: 42px;
-    }
-  }
-}

@@ -18,7 +18,7 @@ function Experience() {
         />
         <div className="circle circle--top-left"></div>
         <div className="circle circle--semicircle-left"></div>
-        <div className="knowledge__text">
+        <div className="knowledge__text pr-5">
           <h2 className="fs-xl pb-sm">Znanje</h2>
           <div className="knowledge__text__items mw-550 fs-base">
             <ul className="ml-lg">
