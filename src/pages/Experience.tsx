@@ -10,17 +10,17 @@ function Experience() {
   useTitle("Iskustvo");
   return (
     <>
-      <section className="pos-r knowledge ptb-custom ptb-custom--first plr-custom">
+      <section className="pos-r knowledge flex ptb-custom ptb-custom--first plr-custom">
         <img
           src={html}
-          className="knowledge__icon-html img-contain png-w fromTop"
+          className="knowledge__icon-html pos-a img-contain png-w fromTop"
           alt="Html"
         />
         <div className="circle circle--top-left"></div>
         <div className="circle circle--semicircle-left"></div>
         <div className="knowledge__text pr-5">
           <h2 className="fs-xl pb-sm">Znanje</h2>
-          <div className="knowledge__text__items mw-550 fs-base">
+          <div className="knowledge__text__items flex mw-550 fs-base">
             <ul className="ml-lg">
               <li>Git</li>
               <li>HTML &amp; CSS</li>
@@ -44,7 +44,7 @@ function Experience() {
         </div>
       </section>
 
-      <section className="pos-r learning ptb-custom plr-custom linear-bg txt-color-primary">
+      <section className="pos-r learning flex flex-fd--c flex-ai--c text-center ptb-custom plr-custom linear-bg txt-color-primary">
         <img
           src={brainProcess}
           loading="lazy"
@@ -54,7 +54,7 @@ function Experience() {
         <img
           src={brain}
           loading="lazy"
-          className="learning__icon-brain img-contain png-w fromTop"
+          className="learning__icon-brain pos-a img-contain png-w fromTop"
           alt="Brain"
         />
         <h2 className="fs-xl pb-sm pt-md">Učenje</h2>
@@ -74,7 +74,7 @@ function Experience() {
       <section className="pos-r experience ptb-custom plr-custom">
         <div className="circle circle--bottom-left"></div>
         <div className="circle circle--top-right"></div>
-        <div className="experience__wrap">
+        <div className="experience__wrap flex flex-jc--sb pos-r">
           <div className="experience__wrap__text mw-550">
             <h1 className="fs-xl pb-sm">Iskustvo</h1>
             <p className="fs-base pb-md">

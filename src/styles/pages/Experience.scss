@@ -1,21 +1,29 @@
 .knowledge {
-  display: flex;
   &__icon-html {
-    position: absolute;
     z-index: 1;
     bottom: toRem(22px);
     left: 17%;
   }
   &__text {
     width: 50%;
-    &__items {
-      display: flex;
-    }
   }
   &__image {
     width: 50%;
   }
-  @media(max-width: toRem(425px)) {
+  @media (max-width: toRem(1024px)) {
+    flex-direction: column;
+    &__icon-html {
+      bottom: toRem(-5px);
+    }
+    &__text {
+      width: 100%;
+      padding-bottom: toRem(70px);
+    }
+    &__image {
+      width: 100%;
+    }
+  }
+  @media (max-width: toRem(425px)) {
     &__text__items {
       flex-direction: column;
     }
@@ -23,12 +31,7 @@
 }
 
 .learning {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
   &__icon-brain {
-    position: absolute;
     bottom: 0px;
     right: 17%;
   }
@@ -39,9 +42,6 @@
 
 .experience {
   &__wrap {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
     &__text {
       width: 50%;
     }
@@ -61,19 +61,6 @@
 }
 
 @media (max-width: toRem(1024px)) {
-  .knowledge {
-    flex-direction: column;
-    &__icon-html {
-      bottom: toRem(-5px);
-    }
-    &__text {
-      width: 100%;
-      padding-bottom: toRem(70px);
-    }
-    &__image {
-      width: 100%;
-    }
-  }
   .experience__wrap__text,
   .knowledge__text {
     padding-right: 0;
@@ -95,4 +82,3 @@
     }
   }
 }
-
