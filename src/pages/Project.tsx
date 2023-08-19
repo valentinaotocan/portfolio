@@ -71,10 +71,13 @@ function Project() {
       <div className="circle circle--top-left"></div>
       <div className="circle circle--small"></div>
       <h1 className="fs-xl pb-sm">Github projekti</h1>
-      <div className="cards">
+      <div className="cards flex flex-fw--w flex-jc--c">
         {posts.map((post) => {
           return (
-            <div key={post.name} className="cards__card">
+            <div
+              key={post.name}
+              className="cards__card flex flex-fd--c flex-jc--sb"
+            >
               <div>
                 <h2>Ime projekta: {post.name}</h2>
                 <p className="ellipsis ellipsis--3">
