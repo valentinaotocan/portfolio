@@ -19,7 +19,7 @@ function About() {
         <div className="circle circle--semicircle-left"></div>
         <div className="about-me__text pr-5">
           <h1 className="fs-xl pb-sm">Kratko o meni</h1>
-          <div className="about-me__text__virtues mw-550 fs-base">
+          <div className="about-me__text__virtues flex mw-550 fs-base">
             <ul className="ml-lg">
               <li>Društvena</li>
               <li>Komunikativna</li>

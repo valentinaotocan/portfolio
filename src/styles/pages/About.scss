@@ -1,9 +1,6 @@
 .about-me {
   &__text {
     width: 50%;
-    &__virtues {
-      display: flex;
-    }
   }
   &__img {
     width: 50%;
@@ -19,7 +16,7 @@
     &__text {
       width: 100%;
       padding-right: 0;
-      padding-bottom: 70px;
+      padding-bottom: toRem(70px);
     }
     &__img {
       width: 100%;
@@ -27,18 +24,16 @@
       justify-content: center;
       &__icon-skills {
         right: 3%;
-        top: -195px;
+        top: toRem(-195px);
       }
     }
   }
-  @media (max-width: 768px) {
-    &__img {
-      &__icon-skills {
+  @media (max-width: toRem(768px)) {
+    &__img__icon-skills {
         display: none;
       }
-    }
   }
-  @media (max-width: 425px) {
+  @media (max-width: toRem(425px)) {
     &__text__virtues {
       flex-direction: column;
     }
