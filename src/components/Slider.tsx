@@ -5,15 +5,15 @@ import {
 } from "react-icons/bs";
 import { useSwipeable } from "react-swipeable";
 import turtle from "../assets/images/turtle.jpeg";
-import daisy from "../assets/images/daisy.jpg";
+import daisy from "../assets/images/daisy.jpeg";
 import mountain from "../assets/images/mountain.jpeg";
 import nature from "../assets/images/nature.jpeg";
-import krka from "../assets/images/krka.jpg";
+import krka from "../assets/images/krka.jpeg";
 import sunset from "../assets/images/sunset.jpeg";
 import marler from "../assets/images/marler.jpeg";
 import storm from "../assets/images/storm.jpeg";
-import foggyBled from "../assets/images/fog-bled.jpg";
-import foggyVenezia from "../assets/images/fog-venezia.jpg";
+import foggyBled from "../assets/images/fog-bled.jpeg";
+import foggyVenezia from "../assets/images/fog-venezia.jpeg";
 
 interface Image {
   title: string;

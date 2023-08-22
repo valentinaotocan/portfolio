@@ -1,6 +1,6 @@
 import useTitle from "../hooks/useTitle";
 import html from "../assets/images/icons/html.png";
-import programming from "../assets/images/programming.jpg";
+import programming from "../assets/images/programming.jpeg";
 import nextLevel from "../assets/images/icons/next-level.png";
 import brainProcess from "../assets/images/icons/brain-process.png";
 import brain from "../assets/images/icons/brain.png";
