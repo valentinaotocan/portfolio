@@ -1,32 +1,31 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { I18nextProvider } from "react-i18next";
+import { BrowserRouter } from "react-router-dom";
 import i18next from "i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
 import global_en from "./locales/en/global.json";
 import global_hr from "./locales/hr/global.json";
-import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import "./styles/main.scss";
 
-i18next.init({
-  // Disable automatic character escaping in translations
-  interpolation: { escapeValue: false },
-
-  // Set the language to automatically detect the user's browser language
-  lng: "auto",
-
-  // Fallback language if the user's language is not available
-  fallbackLng: "en",
-
-  resources: {
-    en: {
-      global: global_en,
+i18next
+  .use(LanguageDetector) // Use language detector
+  .init({
+    interpolation: { escapeValue: false },
+    lng: "auto", // Automatically detect the user's browser language
+    fallbackLng: "en", // Fallback language if the detected language is not available
+    resources: {
+      en: {
+        global: global_en,
+      },
+      hr: {
+        global: global_hr,
+      },
     },
-    hr: {
-      global: global_hr,
-    },
-  },
-});
+    ns: ["global"], // Specify the namespace
+    defaultNS: "global", // Set the default namespace
+  });
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>

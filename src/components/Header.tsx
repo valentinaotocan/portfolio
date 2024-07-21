@@ -1,37 +1,66 @@
-import { useState } from 'react';
+import React, { useState, useCallback, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from "react-router-dom";
 import { IoCloseSharp, IoReorderThreeSharp } from "react-icons/io5";
+import getRoutes from "../locales/routes";
 
 function Header() {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
-  const { t, i18n } = useTranslation("global");
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+  const [routes, setRoutes] = useState(getRoutes(i18n.language));
 
-  const onChangeLang = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const lang_code = e.target.value;
-    i18n.changeLanguage(lang_code);
+  // Function to change the language
+  const onChangeLang = useCallback(
+    (lng: "en" | "hr") => {
+      i18n.changeLanguage(lng);
+    },
+    [i18n]
+  );
+
+  // Handle language change from the select element
+  const handleLangChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedLang = event.target.value as "en" | "hr";
+    onChangeLang(selectedLang);
   };
 
+  useEffect(() => {
+    const newRoutes = getRoutes(i18n.language);
+    setRoutes(newRoutes);
+    // Update the URL to the corresponding path in the new language
+    const currentPath = window.location.pathname;
+    const newPath = Object.values(newRoutes).find(
+      (route) => route === currentPath
+    );
+    if (!newPath) {
+      const routeKeys = Object.keys(newRoutes) as Array<keyof typeof newRoutes>;
+      for (const key of routeKeys) {
+        if (routes[key] === currentPath) {
+          navigate(newRoutes[key], { replace: true });
+          break;
+        }
+      }
+    }
+  }, [i18n.language, navigate, routes]);
+
+  // Toggle the menu open/close state and manage body class
   const toggleMenu = () => {
     setIsMenuOpened(!isMenuOpened);
-    if (!isMenuOpened) {
-      document.body.classList.add("menu-open");
-    } else {
-      document.body.classList.remove("menu-open");
-    }
+    document.body.classList.toggle("menu-open", !isMenuOpened);
   };
 
+  // Close the menu and remove the body class
   const closeMenu = () => {
     setIsMenuOpened(false);
     document.body.classList.remove("menu-open");
   };
 
+  // Prevent click event propagation for the select element
   const handleSelectClick = (
     e: React.MouseEvent<HTMLSelectElement, MouseEvent>
   ) => {
     e.stopPropagation();
   };
-
 
   return (
     <nav className="header flex flex-jc--fe flex-ai--c ptb-xl txt-color-secondary fw-semiBold sans-serif">
@@ -39,19 +68,35 @@ function Header() {
         className={`header__nav ${isMenuOpened ? "open" : ""}`}
         onClick={toggleMenu}
       >
-        <NavLink to="/" className="mr-xl underline" onClick={closeMenu}>
+        <NavLink
+          to={routes.home}
+          className="mr-xl underline"
+          onClick={closeMenu}
+        >
           {t("header.home")}
         </NavLink>
-        <NavLink to="/o-meni" className="mr-xl underline" onClick={closeMenu}>
+        <NavLink
+          to={routes.about}
+          className="mr-xl underline"
+          onClick={closeMenu}
+        >
           {t("header.about")}
         </NavLink>
-        <NavLink to="/projekti" className="mr-xl underline" onClick={closeMenu}>
+        <NavLink
+          to={routes.projects}
+          className="mr-xl underline"
+          onClick={closeMenu}
+        >
           {t("header.projects")}
         </NavLink>
-        <NavLink to="/kontakt" className="mr-xl underline" onClick={closeMenu}>
+        <NavLink
+          to={routes.contact}
+          className="mr-xl underline"
+          onClick={closeMenu}
+        >
           {t("header.contact")}
         </NavLink>
-        <select onChange={onChangeLang} onClick={handleSelectClick}>
+        <select onChange={handleLangChange} onClick={handleSelectClick}>
           <option value="en">EN</option>
           <option value="hr">HR</option>
         </select>
@@ -66,4 +111,5 @@ function Header() {
     </nav>
   );
 }
-export default Header
+
+export default React.memo(Header);

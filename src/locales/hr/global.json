@@ -1,4 +1,10 @@
 {
+  "header": {
+    "home": "Naslovna",
+    "about": "O meni",
+    "projects": "Projekti",
+    "contact": "Kontakt"
+  },
   "footer": {
     "rightsReserved": "Sva prava pridržana"
   }
