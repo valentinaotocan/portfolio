@@ -85,47 +85,6 @@ function Experience() {
         </div>
       </section>
 
-      <section className="pos-r experience ptb-custom plr-custom">
-        <div className="circle circle--bottom-left"></div>
-        <div className="circle circle--top-right"></div>
-        <div className="experience__wrap flex flex-jc--sb pos-r">
-          <div className="experience__wrap__text mw-550">
-            <h1 className="fs-xl pb-sm">Iskustvo</h1>
-            <p className="fs-base pb-md">
-              Kao frontend developer imam 6 mj. radnog iskustva. Za to vrijeme
-              radila sam na sveukupno 10 projekata u koje spada i održavanje web
-              stranica.
-            </p>
-            <p className="fs-base">
-              To su: A1 (Vještine budućnosti - timski rad), Archmedia (coming
-              soon page), Benvenuti, Camp Dvor (održavanje), Chiavalon (zadnja
-              faza), ICT-Istra (početak developmenta), Kabola (timski rad,
-              održavanje), Kutjevo (održavanje), Plus Hosting (timski rad) i
-              Stanzia Vinella (održavanje).
-            </p>
-            <div className="icon-flex">
-              <motion.img
-                src={nextLevel}
-                loading="lazy"
-                className="img-contain png-w"
-                alt="Next level"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fromTop}
-              />
-            </div>
-          </div>
-          <div className="experience__wrap__image pl-5">
-            <img
-              src={screen}
-              loading="lazy"
-              className="img-contain blur w-rsp"
-              alt="Screen"
-            />
-          </div>
-        </div>
-      </section>
     </>
   );
 }

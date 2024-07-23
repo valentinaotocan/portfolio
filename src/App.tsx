@@ -22,7 +22,7 @@ function App() {
   const location = useLocation();
 
   return (
-    <div className="App">
+    <div>
       <Header />
 
       {/* AnimatePresence enables animations when the route changes */}

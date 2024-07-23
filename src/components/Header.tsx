@@ -1,14 +1,17 @@
-import React, { useState, useCallback, useEffect } from "react";
+import React, { useState, useCallback, useEffect, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink, useNavigate } from "react-router-dom";
 import { IoCloseSharp, IoReorderThreeSharp } from "react-icons/io5";
 import getRoutes from "../locales/routes";
 
+// Header component that handles navigation and language change
 function Header() {
   const [isMenuOpened, setIsMenuOpened] = useState(false);
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
-  const [routes, setRoutes] = useState(getRoutes(i18n.language));
+
+  // Memoize routes to avoid recalculating them on every render
+  const routes = useMemo(() => getRoutes(i18n.language), [i18n.language]);
 
   // Function to change the language
   const onChangeLang = useCallback(
@@ -22,21 +25,30 @@ function Header() {
   const handleLangChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedLang = event.target.value as "en" | "hr";
     onChangeLang(selectedLang);
+
+    // Update the URL to the corresponding path in the new language
+    const currentPath = window.location.pathname;
+    const newRoutes = getRoutes(selectedLang);
+    const routeKeys = Object.keys(newRoutes) as Array<keyof typeof newRoutes>;
+    for (const key of routeKeys) {
+      if (routes[key] === currentPath) {
+        navigate(newRoutes[key], { replace: true });
+        break;
+      }
+    }
   };
 
   useEffect(() => {
-    const newRoutes = getRoutes(i18n.language);
-    setRoutes(newRoutes);
-    // Update the URL to the corresponding path in the new language
+    // This effect ensures that the URL is updated if the language changes externally
     const currentPath = window.location.pathname;
-    const newPath = Object.values(newRoutes).find(
+    const newPath = Object.values(routes).find(
       (route) => route === currentPath
     );
     if (!newPath) {
-      const routeKeys = Object.keys(newRoutes) as Array<keyof typeof newRoutes>;
+      const routeKeys = Object.keys(routes) as Array<keyof typeof routes>;
       for (const key of routeKeys) {
         if (routes[key] === currentPath) {
-          navigate(newRoutes[key], { replace: true });
+          navigate(routes[key], { replace: true });
           break;
         }
       }
@@ -63,7 +75,8 @@ function Header() {
   };
 
   return (
-    <nav className="header flex flex-jc--fe flex-ai--c ptb-xl txt-color-secondary fw-semiBold sans-serif">
+    <nav className="header flex flex-jc--fe flex-ai--c txt-color-secondary fw-semiBold sans-serif">
+      <div className="circle circle--top-left"></div>
       <div
         className={`header__nav ${isMenuOpened ? "open" : ""}`}
         onClick={toggleMenu}

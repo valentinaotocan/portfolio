@@ -3,7 +3,7 @@ import { fromOpacity, fromTop } from "../Animation";
 import useTitle from "../hooks/useTitle";
 import skills from "../assets/images/icons/skills.png";
 import profile from "../assets/images/profile.jpeg";
-import coding from "../assets/images/icons/coding.png";
+// import coding from "../assets/images/icons/coding.png";
 import puzzle from "../assets/images/icons/puzzle.png";
 import book from '../assets/images/icons/book.png';
 import sunset from '../assets/images/icons/sunset.png';
@@ -15,7 +15,6 @@ function About() {
   return (
     <>
       <section className="pos-r about-me flex ptb-custom ptb-custom--first plr-custom">
-        <div className="circle circle--top-left circle--top-left--smaller"></div>
         <div className="circle circle--semicircle-left"></div>
         <div className="about-me__text pr-5">
           <h1 className="fs-xl pb-sm">Kratko o meni</h1>
@@ -59,7 +58,7 @@ function About() {
       </section>
 
       <section className="pos-r frontend flex text-center flex-fd--c flex-ai--c ptb-custom linear-bg plr-custom txt-color-primary">
-        <motion.img
+        {/* <motion.img
           src={coding}
           loading="lazy"
           className="frontend__icon-coding png-w"
@@ -68,7 +67,7 @@ function About() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-        />
+        /> */}
         <motion.img
           src={puzzle}
           loading="lazy"

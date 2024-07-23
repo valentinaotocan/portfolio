@@ -1,95 +1,95 @@
 .home {
-  min-height: 100vh;
-  height: 100%;
-  overflow-y: hidden;
-  &__picture {
-    width: 50%;
-    padding-top: toRem(30px);
-    &__me {
-      max-height: 70vh;
-      border-radius: 40%;
+  &__greeting {
+    /* Fallback for older browsers */
+    min-height: calc(100vh - toRem(104px));
+    /* Modern browsers supporting dvh */
+    min-height: calc(100dvh - toRem(104px));
+
+    &__picture {
+      width: 50%;
+      background: radial-gradient(
+          circle at bottom left,
+          #0082c8 35%,
+          transparent 36%
+        ),
+        radial-gradient(circle at top right, #0082c8 35%, transparent 36%);
+      background-size: 6em 6em;
+      background-color: $primary-color;
+      margin-left: 5%;
+
+      &__girl {
+        max-height: 100%;
+        border-radius: 50%;
+        border: 10px solid $secondary-color;
+        margin: toRem(40px);
+      }
     }
-    &__ecology {
-      top: toRem(18px);
-      left: 19%;
-      display: block;
+
+    &__text {
+      color: $secondary-color;
+      width: 50%;
     }
-    &__work {
-      right: 7%;
-      top: toRem(257px);
+
+    @media (max-width: toRem(1024px)) {
+      flex-direction: column-reverse;
+
+      &__picture,
+      &__text {
+        width: 100%;
+        height: auto;
+      }
+
+      &__picture {
+        margin-left: 0;
+        padding: 20px 5%;
+
+        &__girl {
+          height: 40vh;
+        }
+      }
     }
-    &__pet {
-      bottom: toRem(42px);
-      left: 14%;
+
+    @media (max-width: toRem(382px)) {
+      &__picture__girl {
+        border: unset;
+      }
     }
-  }
-  &__text {
-    color: $secondary-color;
-    width: 50%;
   }
 
-  @media (max-width: toRem(1600px)) {
-    &__picture__ecology {
-      left: 16%;
+  &__introduction {
+    min-height: calc(100vh - (toRem(104px) + toRem(80px)));
+
+    &__laptop-icon {
+      bottom: 80px;
+      right: 10%;
+      rotate: 4deg;
     }
-    &__picture__pet {
-      left: 6%;
+
+    &__ecology-icon {
+      top: 80px;
+      left: 10%;
+      rotate: 346deg;
     }
-    &__picture__work {
-      right: -3%;
-    }
-  }
-  @media (max-width: toRem(1460px)) {
-    &__text {
-      padding-left: 5%;
-    }
-  }
-  @media (max-width: toRem(1024px)) {
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    padding-top: toRem(80px);
-    padding-bottom: toRem(80px);
-    &__picture {
-      padding-top: 0;
-      width: 65%;
-      &__me {
-      max-height: 50vh;
-    }
-      &__ecology {
-        left: 2%;
+
+    @media (max-width: toRem(768px)) {
+      &__laptop-icon {
+        bottom: 20px;
       }
-      &__pet {
-        left: 0;
+
+      &__ecology-icon {
+        top: 20px;
       }
     }
-    &__text {
-      padding-top: toRem(40px);
-      width: 100%;
-      padding-left: 0;
-    }
-  }
-  @media (max-width: toRem(768px)) {
-    &__picture {
-      width: 80%;
-    }
-    &__picture__work {
-      right: -8%;
-      top: toRem(200px);
-    }
-  }
-  @media (max-width: toRem(500px)) {
-    &__picture {
-      width: 100%;
-      &__ecology {
+
+    @media (max-width: toRem(375px)) {
+      &__ecology-icon {
         display: none;
       }
-      &__pet {
-        display: none;
-      }
-      &__work {
-        right: -1%;
-        top: 0;
+    }
+
+    @media (max-height: 740px) {
+      &__laptop-icon {
+        bottom: 0px;
       }
     }
   }

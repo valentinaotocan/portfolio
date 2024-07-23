@@ -12,6 +12,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 html {
   text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -26,7 +31,7 @@ body {
   // Improve text rendering
   -webkit-font-smoothing: antialiased;
   &.menu-open {
-    @media(max-width: toRem(1024px)) {
+    @media (max-width: toRem(1024px)) {
       overflow: hidden;
     }
   }

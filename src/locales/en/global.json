@@ -1,9 +1,25 @@
 {
+  "title": {
+    "home": "Home"
+  },
   "header": {
     "home": "Home",
     "about": "About",
     "projects": "Projects",
     "contact": "Contact"
+  },
+  "home": {
+    "personal": {
+      "greeting": "Hey!",
+      "name": "My name is Valentina.",
+      "career":  "I am a frontend developer."
+    },
+    "introduction": {
+      "line1": "Highly motivated and detail-oriented Junior Frontend Developer specializing in React and Next.js, with hands-on experience building web applications.",
+      "line2": "Developed and delivered over 30 projects, collaborating with cross-functional teams.",
+      "line3": "Passionate about transforming UX/UI designs into responsive, user-friendly interfaces.",
+      "line4": "Dedicated to continuous growth through coding bootcamps and online courses."
+    }
   },
   "footer": {
     "rightsReserved": "All rights reserved"

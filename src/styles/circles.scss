@@ -6,7 +6,7 @@ $lg-size: toRem(250px);
 $xl-size: toRem(280px);
 
 .circle {
-  // bottom - right
+  // Bottom-right position
   position: absolute;
   background: $linear-gradient;
   width: $lg-size;
@@ -14,40 +14,47 @@ $xl-size: toRem(280px);
   border-radius: 100% 0 0 0;
   bottom: 0;
   right: 0;
+
   &--small {
     width: $xs-size;
     height: $xs-size;
   }
+
+  // Bottom-left position
   &--bottom-left {
     left: 0;
     width: $md-size;
     height: $md-size;
     border-radius: 0 100% 0 0;
   }
+
+  // Top-left position
   &--top-left {
     top: 0;
     left: 0;
-    width: $sm-size;
-    height: $sm-size;
+    width: $xs-size;
+    height: $xs-size;
     border-radius: 0 0 100% 0;
     z-index: 500;
-    &--smaller {
-      width: $xs-size;
-      height: $xs-size;
-    }
   }
+
+  // Semicircle left
   &--semicircle-left {
     width: $xl-size;
     height: toRem(140px);
     left: 12%;
     border-radius: 150px 150px 0 0;
   }
+
+  // Top-right position
   &--top-right {
     top: 0;
     width: $xs-size;
     height: $xs-size;
     border-radius: 0 0 0 100%;
   }
+
+  // Semicircle right
   &--semicircle-right {
     width: $md-size;
     height: $xs-size;
@@ -55,24 +62,30 @@ $xl-size: toRem(280px);
     top: 0;
     right: 8%;
   }
+
+  // Responsive design adjustments for screens smaller than 1024px
   @media (max-width: toRem(1024px)) {
     width: $sm-size;
     height: $sm-size;
+
     &--small {
       width: $xs-size;
       height: $xs-size;
     }
+
     &--top-left,
     &--top-right,
     &--bottom-left {
       width: $xs-size;
       height: $xs-size;
     }
+
     &--semicircle-left {
       width: toRem(160px);
       height: $xxs-size;
       border-radius: 80px 80px 0 0;
     }
+
     &--semicircle-right {
       width: $md-size;
       height: $xs-size;

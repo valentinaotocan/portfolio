@@ -1,9 +1,25 @@
 {
+  "title": {
+    "home": "Naslovna"
+  },
   "header": {
     "home": "Naslovna",
     "about": "O meni",
     "projects": "Projekti",
     "contact": "Kontakt"
+  },
+  "home": {
+    "personal": {
+      "greeting": "Pozdrav!",
+      "name": "Zovem se Valentina.",
+      "career": "Ja sam frontend developer."
+    },
+    "introduction": {
+      "line1": "Motivirana i detaljima orijentirana Junior Frontend Developerka specijalizirana za React i Next.js, s praktičnim iskustvom u izradi web aplikacija.",
+      "line2": "Razvila i isporučila više od 30 projekata, surađujući s kros-funkcionalnim timovima.",
+      "line3": "Strastvena prema transformaciji UX/UI dizajna u responzivna i oku ugodna sučelja.",
+      "line4": "Posvećena kontinuiranom rastu kroz coding bootcampove i online tečajeve."
+    }
   },
   "footer": {
     "rightsReserved": "Sva prava pridržana"
