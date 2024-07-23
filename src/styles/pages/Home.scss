@@ -9,10 +9,14 @@
       width: 50%;
       background: radial-gradient(
           circle at bottom left,
-          #0082c8 35%,
+          $secondary-color 35%,
           transparent 36%
         ),
-        radial-gradient(circle at top right, #0082c8 35%, transparent 36%);
+        radial-gradient(
+          circle at top right,
+          $secondary-color 35%,
+          transparent 36%
+        );
       background-size: 6em 6em;
       background-color: $primary-color;
       margin-left: 5%;
