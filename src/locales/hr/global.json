@@ -15,10 +15,60 @@
       "career": "Ja sam frontend developer."
     },
     "introduction": {
-      "line1": "Motivirana i detaljima orijentirana Junior Frontend Developerka specijalizirana za React i Next.js, s praktičnim iskustvom u izradi web aplikacija.",
-      "line2": "Razvila i isporučila više od 30 projekata, surađujući s kros-funkcionalnim timovima.",
-      "line3": "Strastvena prema transformaciji UX/UI dizajna u responzivna i oku ugodna sučelja.",
-      "line4": "Posvećena kontinuiranom rastu kroz coding bootcampove i online tečajeve."
+      "overview": "Motivirana i detaljima orijentirana Junior Frontend Developerka specijalizirana za React i Next.js, s praktičnim iskustvom u izradi web aplikacija.",
+      "achievements": "Razvila i isporučila više od 30 projekata, surađujući s kros-funkcionalnim timovima.",
+      "passion": "Strastvena prema transformaciji UX/UI dizajna u responzivna i oku ugodna sučelja.",
+      "growth": "Posvećena kontinuiranom rastu kroz coding bootcampove i online tečajeve."
+    }
+  },
+  "about": {
+    "hardSkills": {
+      "heading": "Tvrde vještine"
+    },
+    "frontend": {
+      "heading": "Zašto baš frontend?",
+      "reasons": [
+        "Frontend programiranje mi je poput slaganje puzli koje budi u meni dječju stranu. Daje mi razmišljati kako posložiti segmente web stranice.",
+        "Svaki frontend projekt je drugačiji, što izgledom, što funkcionalnostima, stoga je svakog puta novi izazov i iskustvo. Nikad monoton.",
+        "Idealan je za vizualne tipove poput mene."
+      ]
+    },
+    "softSkills": {
+      "heading": "Meke vještine",
+      "skills": [
+        "Timska igračica i suradljiva",
+        "Komunikativna",
+        "Posvećena detaljima",
+        "Rješavanje problema",
+        "Motivirana"
+      ]
+    },
+    "learning": {
+      "heading": "Učenje",
+      "reasons": [
+        "Učenje je za mene putovanje koje ne završava.",
+        "Težim dubljem razumijevanju kako bih mogla postati što bolja.",
+        "S oduševljenjem prihvaćam izazove koje budućnost nosi i strastveno radim na izgradnji temelja za svoju karijeru u svijetu frontend razvoja."
+      ]
+    },
+    "hobby": {
+      "heading": "Hobi",
+      "book": {
+        "title": "Čitanje knjiga",
+        "paragraph": "Najviše volim čitati knjige o psihologiji jer me osvješćuju i otvaraju neki novi pogled na stvari."
+      },
+      "nature": {
+        "title": "Priroda",
+        "paragraph": "Od šetnje prirodom koja je dnevni odmor za dušu i tijelo do istraživanja sakrivenih mjesta."
+      },
+      "plants": {
+        "title": "Biljke",
+        "paragraph": "Uzgoj sukulenata. Što su neobičniji to su zanimljiviji."
+      },
+      "photography": {
+        "title": "Fotografija",
+        "paragraph": "Galerija mojih fotografija."
+      }
     }
   },
   "footer": {

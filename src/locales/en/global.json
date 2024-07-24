@@ -12,13 +12,63 @@
     "personal": {
       "greeting": "Hey!",
       "name": "My name is Valentina.",
-      "career":  "I am a frontend developer."
+      "career": "I am a frontend developer."
     },
     "introduction": {
-      "line1": "Highly motivated and detail-oriented Junior Frontend Developer specializing in React and Next.js, with hands-on experience building web applications.",
-      "line2": "Developed and delivered over 30 projects, collaborating with cross-functional teams.",
-      "line3": "Passionate about transforming UX/UI designs into responsive, user-friendly interfaces.",
-      "line4": "Dedicated to continuous growth through coding bootcamps and online courses."
+      "overview": "Highly motivated and detail-oriented Junior Frontend Developer specializing in React and Next.js, with hands-on experience building web applications.",
+      "achievements": "Developed and delivered over 30 projects, collaborating with cross-functional teams.",
+      "passion": "Passionate about transforming UX/UI designs into responsive, user-friendly interfaces.",
+      "growth": "Dedicated to continuous growth through coding bootcamps and online courses."
+    }
+  },
+  "about": {
+    "hardSkills": {
+      "heading": "Hard skills"
+    },
+    "frontend": {
+      "heading": "Why exactly frontend?",
+      "reasons": [
+        "For me, frontend programming is like putting together a puzzle that awakens the childish side in me. It makes me think about how to arrange the segments of the web page.",
+        "Every frontend project is different, both in terms of appearance and functionality, so every time is a new challenge and experience. Never monotonous.",
+        "It's ideal for visual types like me."
+      ]
+    },
+    "softSkills": {
+      "heading": "Soft skills",
+      "skills": [
+        "Team player and collaborative",
+        "Communicative",
+        "Attention to details",
+        "Problem solving",
+        "Motivated"
+      ]
+    },
+    "learning": {
+      "heading": "Learning",
+      "reasons": [
+        "For me, learning is a journey that never ends.",
+        "I strive for a deeper understanding so that I can become as good as possible.",
+        "I enthusiastically accept the challenges that the future holds and work passionately to build the foundation for my career in the world of frontend development."
+      ]
+    },
+    "hobby": {
+      "heading": "Hobby",
+      "book": {
+        "title": "Reading books",
+        "paragraph": "I like reading books on psychology the most because they enlighten me and open a new perspective on things."
+      },
+      "nature": {
+        "title": "Nature",
+        "paragraph": "From walking in nature, which is relaxing for body and soul, to exploring hidden places."
+      },
+      "plants": {
+        "title": "Plants",
+        "paragraph": "Succulents cultivation. The more unusual they are, the more interesting they are."
+      },
+      "photography": {
+        "title": "Photography",
+        "paragraph": "Gallery of my photos."
+      }
     }
   },
   "footer": {
