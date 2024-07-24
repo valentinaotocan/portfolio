@@ -22,14 +22,16 @@ function Home() {
     <main className="home mt-10xl">
       <section className="home__greeting flex">
         <div className="home__greeting__picture flex flex-jc--c flex-ai--c">
-          <motion.img
-            src={girl}
-            className="home__greeting__picture__girl img-contain"
-            alt="Girl"
-            variants={fromOpacity}
-            initial="hidden"
-            animate="visible"
-          />
+          <div className="home__greeting__picture__wrap">
+            <motion.img
+              src={girl}
+              className="girl-image img-contain"
+              alt="Girl"
+              variants={fromOpacity}
+              initial="hidden"
+              animate="visible"
+            />
+          </div>
         </div>
         <motion.div
           className="home__greeting__text plr-small ptb-4xl text-center flex flex-fd--c flex-ai--c flex-jc--c"

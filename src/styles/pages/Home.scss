@@ -19,19 +19,20 @@
         );
       background-size: 6em 6em;
       background-color: $primary-color;
-      margin-left: 5%;
 
-      &__girl {
-        max-height: 100%;
-        border-radius: 50%;
-        border: 10px solid $secondary-color;
-        margin: toRem(40px);
+      &__wrap {
+        .girl-image {
+          border-radius: 50%;
+          border: 10px solid $secondary-color;
+        }
+        padding: toRem(40px) 5%;
       }
     }
 
     &__text {
       color: $secondary-color;
       width: 50%;
+      flex: 1;
     }
 
     @media (max-width: toRem(1024px)) {
@@ -40,21 +41,15 @@
       &__picture,
       &__text {
         width: 100%;
-        height: auto;
       }
 
-      &__picture {
-        margin-left: 0;
-        padding: 20px 5%;
-
-        &__girl {
-          height: 40vh;
-        }
+      &__picture__wrap .girl-image {
+        height: 40vh;
       }
     }
 
     @media (max-width: toRem(382px)) {
-      &__picture__girl {
+      &__picture__wrap .girl-image {
         border: unset;
       }
     }
