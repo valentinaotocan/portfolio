@@ -12,10 +12,10 @@ function Home() {
   useTitle(t("title.home"));
 
   const introductionLines = [
-    "home.introduction.line1",
-    "home.introduction.line2",
-    "home.introduction.line3",
-    "home.introduction.line4",
+    "home.introduction.overview",
+    "home.introduction.achievements",
+    "home.introduction.passion",
+    "home.introduction.growth",
   ];
 
   return (
