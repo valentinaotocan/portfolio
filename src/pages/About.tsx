@@ -1,65 +1,79 @@
 import { motion } from "framer-motion";
 import { fromOpacity, fromTop } from "../Animation";
+import { useTranslation } from "react-i18next";
 import useTitle from "../hooks/useTitle";
-import skills from "../assets/images/icons/skills.png";
-import profile from "../assets/images/profile.jpeg";
-// import coding from "../assets/images/icons/coding.png";
+import programming from "../assets/images/programming.jpeg";
+import codeGif from "../assets/images/code-gif.webp";
+import codeIcon from "../assets/images/icons/code.png";
 import puzzle from "../assets/images/icons/puzzle.png";
-import book from '../assets/images/icons/book.png';
-import sunset from '../assets/images/icons/sunset.png';
-import succulent from '../assets/images/icons/succulent.png';
+import book from "../assets/images/icons/book.png";
+import sunset from "../assets/images/icons/sunset.png";
+import succulent from "../assets/images/icons/succulent.png";
+import work from "../assets/images/icons/work.png";
 import Slider from "../components/Slider";
+import html from "../assets/images/icons/html.png";
+import nextLevel from "../assets/images/icons/next-level.png";
+import brainProcess from "../assets/images/icons/brain-process.png";
+import brain from "../assets/images/icons/brain.png";
+import screen from "../assets/images/screen.jpg";
+import softSkillSmall from "../assets/images/soft-skill__small.jpg";
+import softSkillBig from "../assets/images/soft-skill__big.jpg";
 
 function About() {
-  useTitle("O meni");
+  const { t } = useTranslation();
+
+  useTitle(t("title.about"));
+
+  const skills = t("about.softSkills.skills", {
+    returnObjects: true,
+  }) as string[];
+  const frontendReasons = t("about.frontend.reasons", {
+    returnObjects: true,
+  }) as string[];
+  const learningReasons = t("about.learning.reasons", {
+    returnObjects: true,
+  }) as string[];
+
   return (
-    <>
-      <section className="pos-r about-me flex ptb-custom ptb-custom--first plr-custom">
+    <main className="about mt-10xl">
+      <section className="pos-r about__skills flex plr-small">
         <div className="circle circle--semicircle-left"></div>
-        <div className="about-me__text pr-5">
-          <h1 className="fs-xl pb-sm">Kratko o meni</h1>
-          <div className="about-me__text__virtues flex mw-550 fs-base">
-            <ul className="ml-lg">
-              <li>Društvena</li>
-              <li>Komunikativna</li>
-              <li>Pristupačna</li>
-              <li>Odgovorna</li>
-              <li>Organizirana</li>
-            </ul>
-            <ul className="ml-6xl">
-              <li>Marljiva</li>
-              <li>Kreativna</li>
-              <li>Otvorena za učenje novih stvari</li>
-              <li>Stalo mi je do međuljudskih odnosa</li>
-              <li>Uvijek spremna na pomoć</li>
-            </ul>
-          </div>
+        <div className="about__skills__text pr-5 ptb-custom">
+          <h1 className="fs-xl pb-sm">{t("about.hardSkills.heading")}</h1>
+          <ul className="fs-base ml-lg">
+            <li>Git & Github</li>
+            <li>React.js</li>
+            <li>Next.js</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>(S)CSS</li>
+            <li>BEM</li>
+          </ul>
         </div>
-        <div className="about-me__img pos-r pl-5">
-          <motion.img
-            src={profile}
-            loading="lazy"
-            className="about-me__img__profile img-contain"
-            alt="Profile"
-            variants={fromOpacity}
-            initial="hidden"
-            animate="visible"
-          />
-          <motion.img
-            src={skills}
-            className="about-me__img__icon-skills pos-a png-w"
-            alt="Skills"
+        <div className="about__skills__img hardSkillsImage pl-5">
+          {/* <motion.img
+            src={codeIcon}
+            className="frontend__icon-puzzle png-w"
+            alt="Puzzle"
+            variants={fromTop}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            variants={fromTop}
+          /> */}
+          <motion.img
+            src={codeGif}
+            className="code-gif img-contain"
+            alt="Code Gif"
+            variants={fromOpacity}
+            initial="hidden"
+            animate="visible"
           />
         </div>
       </section>
 
       <section className="pos-r frontend flex text-center flex-fd--c flex-ai--c ptb-custom linear-bg plr-custom txt-color-primary">
-        {/* <motion.img
-          src={coding}
+        <motion.img
+          src={work}
           loading="lazy"
           className="frontend__icon-coding png-w"
           alt="Coding"
@@ -67,7 +81,7 @@ function About() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-        /> */}
+        />
         <motion.img
           src={puzzle}
           loading="lazy"
@@ -78,32 +92,88 @@ function About() {
           whileInView="visible"
           viewport={{ once: true }}
         />
-        <h2 className="fs-xl pt-md pb-sm">Zašto baš frontend?</h2>
-        <div className="frontend__text mw-550">
-          <p className="pb-md fs-base">
-            Frontend programiranje mi je poput slaganje puzli koje budi u meni
-            dječju stranu. Daje mi razmišljati kako posložiti segmente web
-            stranice.
-          </p>
-          <p className="pb-md fs-base">
-            Svaki frontend projekt je drugačiji, što izgledom, što
-            funkcionalnostima, stoga je svakog puta novi izazov i iskustvo.
-            Nikad monoton.
-          </p>
-          <p className="fs-base">Idealan je za vizualne tipove poput mene.</p>
+        <h2 className="fs-xl pt-md pb-lg">{t("about.frontend.heading")}</h2>
+        <div className="frontend__text">
+          {frontendReasons.map((reason: string, index: number) => (
+            <p className="pb-lg fs-base" key={index}>
+              {reason}
+            </p>
+          ))}
         </div>
       </section>
 
-      <section className="pos-r hobby ptb-custom plr-custom">
+      <section className="pos-r about__skills flex ptb-custom plr-custom">
+        <div className="circle circle--semicircle-left"></div>
         <div className="circle circle--semicircle-right"></div>
-        <div className="mw-550">
-          <h2 className="fs-xl pb-sm">Hobi</h2>
-          <div className="pos-r">
-            <h3 className="fs-lg">Čitanje knjiga</h3>
-            <p className="pb-lg fs-base">
-              Najviše volim čitati knjige o psihologiji jer me osvješćuju i
-              otvaraju neki novi pogled na stvari.
+        <div className="about__skills__text pr-5">
+          <h1 className="fs-xl pb-sm">{t("about.softSkills.heading")}</h1>
+          <div className="fs-base">
+            <ul className="ml-lg">
+              {skills.map((skill: string, index: number) => (
+                <li key={index}>{skill}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className="about__skills__img pl-5">
+          <motion.img
+            srcSet={`
+              ${softSkillSmall} 640w,
+              ${softSkillBig} 1920w
+            `}
+            sizes="
+              (max-width: 640px) 640px,
+              (min-width: 641px) and (max-width: 1920px) 960px,
+              960px
+            "
+            src={softSkillBig}
+            alt="Soft Skill Image"
+            className="about-me__img__profile img-contain"
+            variants={fromOpacity}
+            initial="hidden"
+            animate="visible"
+          />
+        </div>
+      </section>
+
+      <section className="pos-r learning flex flex-fd--c flex-ai--c text-center ptb-custom plr-custom linear-bg txt-color-primary">
+        <motion.img
+          src={brainProcess}
+          loading="lazy"
+          className="learning__icon-process img-contain png-w"
+          alt="Learning process"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fromTop}
+        />
+        <motion.img
+          src={brain}
+          loading="lazy"
+          className="learning__icon-brain pos-a img-contain png-w"
+          alt="Brain"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fromTop}
+        />
+        <h2 className="fs-xl pb-sm pt-md">{t("about.frontend.heading")}</h2>
+        <div className="learning__text fs-base">
+          {learningReasons.map((reason: string, index: number) => (
+            <p className="pb-lg fs-base" key={index}>
+              {reason}
             </p>
+          ))}
+        </div>
+      </section>
+
+      <section className="about__hobby pos-r ptb-custom plr-custom">
+        <div className="circle circle--semicircle-right"></div>
+        <div className="about__hobby__wrap">
+          <h2 className="fs-xl pb-sm">{t("about.hobby.heading")}</h2>
+          <div className="pos-r">
+            <h3 className="fs-lg">{t("about.hobby.book.title")}</h3>
+            <p className="pb-lg fs-base">{t("about.hobby.book.paragraph")}</p>
             <motion.img
               src={book}
               loading="lazy"
@@ -116,11 +186,8 @@ function About() {
             />
           </div>
           <div className="pos-r">
-            <h3 className="fs-lg">Priroda</h3>
-            <p className="pb-lg fs-base">
-              Od šetnje prirodom koja je dnevni odmor za dušu i tijelo do
-              istraživanja sakrivenih mjesta.
-            </p>
+            <h3 className="fs-lg">{t("about.hobby.nature.title")}</h3>
+            <p className="pb-lg fs-base">{t("about.hobby.nature.paragraph")}</p>
             <motion.img
               src={sunset}
               loading="lazy"
@@ -133,10 +200,8 @@ function About() {
             />
           </div>
           <div className="pos-r">
-            <h3 className="fs-lg">Biljke</h3>
-            <p className="pb-lg fs-base">
-              Uzgoj sukulenata. Što su neobičniji to su zanimljiviji.
-            </p>
+            <h3 className="fs-lg">{t("about.hobby.plants.title")}</h3>
+            <p className="pb-lg fs-base">{t("about.hobby.plants.paragraph")}</p>
             <motion.img
               src={succulent}
               loading="lazy"
@@ -148,15 +213,17 @@ function About() {
               viewport={{ once: true }}
             />
           </div>
-          <h3 className="fs-lg">Fotografija</h3>
-          <p className="pb-xl fs-base">Galerija mojih fotografija.</p>
+          <h3 className="fs-lg">{t("about.hobby.photography.title")}</h3>
+          <p className="pb-xl fs-base">
+            {t("about.hobby.photography.paragraph")}
+          </p>
         </div>
 
         <Slider />
 
         <div className="circle circle--small"></div>
       </section>
-    </>
+    </main>
   );
 }
 export default About;

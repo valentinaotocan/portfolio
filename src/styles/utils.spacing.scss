@@ -112,6 +112,14 @@ $spacer: 0.5rem;
 .pr-5 {
   padding-right: 5%;
 }
+.plr-custom {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.ptb-custom {
+  padding-top: 104px;
+  padding-bottom: 104px;
+}
 
 @media (max-width: toRem(1024px)) {
   .pl-5 {
@@ -120,7 +128,8 @@ $spacer: 0.5rem;
 }
 
 @media (max-width: toRem(425px)) {
-  .plr-small{
+  .plr-small, 
+  .plr-custom {
     padding-left: toRem(24px);
     padding-right: toRem(24px);
   }
