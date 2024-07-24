@@ -22,7 +22,7 @@ function App() {
   const location = useLocation();
 
   return (
-    <div>
+    <>
       <Header />
 
       {/* AnimatePresence enables animations when the route changes */}
@@ -74,7 +74,7 @@ function App() {
       </AnimatePresence>
       
       <Footer />
-    </div>
+    </>
   );
 }
 
