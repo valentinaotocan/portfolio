@@ -72,16 +72,15 @@ function Project() {
   }
 
   return (
-    <section className="pos-r ptb-custom ptb-custom--first plr-custom">
-      <div className="circle circle--top-left"></div>
+    <section className="projects pos-r mt-10xl plr-small ptb-custom">
       <div className="circle circle--small"></div>
-      <h1 className="fs-xl pb-sm">Github projekti</h1>
-      <div className="cards flex flex-fw--w flex-jc--c">
+      <h1 className="fs-xl pb-xl">Github projekti</h1>
+      <div className="projects__cards">
         {posts.map((post) => {
           return (
             <div
               key={post.name}
-              className="cards__card flex flex-fd--c flex-jc--sb"
+              className="projects__cards__card flex flex-fd--c flex-jc--sb"
             >
               <div>
                 <h2>Ime projekta: {post.name}</h2>

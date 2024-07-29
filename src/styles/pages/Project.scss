@@ -1,22 +1,35 @@
-.cards {
-  gap: toRem(24px);
-  &__card {
-    border: 3px solid $secondary-color;
+.projects {
+  padding-top: 54px;
+
+  &__cards {
+    display: grid;
+    gap: toRem(24px);
+    grid-template-columns: repeat(auto-fill, minmax(toRem(300px), 1fr));
     width: 100%;
-    max-width: toRem(380px);
-    height: toRem(400px);
-    padding: toRem(16px);
-    a {
-      align-self: center;
+
+    @media (max-width: toRem(370px)) {
+      grid-template-columns: repeat(auto-fill, minmax(toRem(150px), 1fr));
     }
-    .ellipsis {
-      overflow: hidden;
-      display: -webkit-box;
-      -webkit-box-orient: vertical;
-      -webkit-line-clamp: 2; /* start showing ellipsis when 2nd line is reached */
-      white-space: pre-wrap; /* let the text wrap preserving spaces */
-      &--3 {
-        -webkit-line-clamp: 3;
+
+    &__card {
+      border: 3px solid $secondary-color;
+      height: toRem(400px);
+      padding: toRem(16px);
+
+      a {
+        align-self: center;
+      }
+
+      .ellipsis {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2; /* start showing ellipsis when 2nd line is reached */
+        white-space: pre-wrap; /* let the text wrap preserving spaces */
+
+        &--3 {
+          -webkit-line-clamp: 3;
+        }
       }
     }
   }
