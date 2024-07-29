@@ -1,6 +1,7 @@
 import useTitle from "../hooks/useTitle";
 import bottle from '../assets/images/icons/message-in-a-bottle.png';
 import pigeon from "../assets/images/icons/pigeon.png";
+import { useTranslation } from "react-i18next";
 import { BsFacebook, BsLinkedin, BsInstagram } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
 import { FaMobileScreen } from "react-icons/fa6";
@@ -9,7 +10,9 @@ import { fromOpacity, fromTop } from "../Animation";
 
 
 function Contact() {
-  useTitle("Kontakt");
+  const { t } = useTranslation();
+  useTitle(t("header.contact"));
+
   return (
     <section className="pos-r contact flex flex-jc--c flex-ai--c plr-custom">
       <div className="circle"></div>

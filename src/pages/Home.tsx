@@ -9,7 +9,7 @@ import ecology from "../assets/images/icons/ecology.png";
 
 function Home() {
   const { t } = useTranslation();
-  useTitle(t("title.home"));
+  useTitle(t("header.home"));
 
   const introductionLines = [
     "home.introduction.overview",

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import Loader from "../components/Loader";
 import exclamation from "../assets/images/icons/exclamation-mark.png";
+import useTitle from "../hooks/useTitle";
 
 interface Post {
   html_url: string;
@@ -12,6 +14,9 @@ interface Post {
 }
 
 function Project() {
+  const { t } = useTranslation();
+  useTitle(t("header.projects"));
+
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
