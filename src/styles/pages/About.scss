@@ -1,22 +1,33 @@
 .about {
+  //HARD SKILLS SECTION
   &__skills {
     &__text,
     &__img {
       width: 50%;
     }
 
+    &__text {
+      padding-left: 10%;
+    }
+
+    .html-icon {
+      position: absolute;
+      top: 30px;
+      right: 5%;
+    }
+
     &__img.hardSkillsImage {
       position: relative;
-      height: 100vh;
-          display: flex;
-    align-items: center;
-    justify-content: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: toRem(800px);
       &::before {
         content: "";
         background: url("https://images.unsplash.com/photo-1563206767-5b18f218e8de")
           no-repeat center center/cover;
         position: absolute;
-         opacity: 0.5;
+        opacity: 0.5;
         top: 0;
         left: 0;
         width: 100%;
@@ -27,26 +38,65 @@
       .code-gif {
         position: relative;
         z-index: 2;
+        padding: 0 toRem(24px);
       }
     }
 
     @media (max-width: toRem(1024px)) {
       flex-direction: column;
+
+      .circle--semicircle-left {
+        display: none;
+      }
+
       &__text {
         width: 100%;
         padding-right: 0;
+        padding-top: toRem(70px);
+        padding-right: 10%;
         padding-bottom: toRem(70px);
       }
+
       &__img {
         width: 100%;
         display: flex;
         justify-content: center;
+
+        &.hardSkillsImage {
+          height: toRem(500px);
+        }
       }
     }
-    @media (max-width: toRem(425px)) {
-      &__text__virtues {
-        flex-direction: column;
-      }
+  }
+
+  // FRONTEND SECTION
+  &__frontend {
+    .icon-puzzle {
+      bottom: toRem(-44px);
+      right: 11%;
+      z-index: 1;
+    }
+
+    &__text {
+      max-width: toRem(550px);
+    }
+  }
+
+  // SOFT-SKILLS
+  &__skills__img.softSkillsWrap {
+    height: toRem(800px);
+
+    .soft-img {
+      object-fit: cover;
+      height: 100%;
+    }
+
+    @media (max-width: toRem(1024px)) {
+      height: toRem(500px);
+
+      .soft-img {
+        width: 100%;
+      }  
     }
   }
 
@@ -70,14 +120,6 @@
       .icon-succulent {
         right: -85%;
       }
-    }
-  }
-
-  .frontend {
-    &__icon-puzzle {
-      bottom: toRem(-44px);
-      right: 11%;
-      z-index: 1;
     }
   }
 

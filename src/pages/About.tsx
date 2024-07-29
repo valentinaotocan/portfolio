@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import useTitle from "../hooks/useTitle";
 import programming from "../assets/images/programming.jpeg";
 import codeGif from "../assets/images/code-gif.webp";
-import codeIcon from "../assets/images/icons/code.png";
+import studioVisualCode from "../assets/images/icons/code.png";
 import puzzle from "../assets/images/icons/puzzle.png";
 import book from "../assets/images/icons/book.png";
 import sunset from "../assets/images/icons/sunset.png";
@@ -16,13 +16,13 @@ import nextLevel from "../assets/images/icons/next-level.png";
 import brainProcess from "../assets/images/icons/brain-process.png";
 import brain from "../assets/images/icons/brain.png";
 import screen from "../assets/images/screen.jpg";
-import softSkillSmall from "../assets/images/soft-skill__small.jpg";
-import softSkillBig from "../assets/images/soft-skill__big.jpg";
+import softSkillS from "../assets/images/soft-skill__small.jpg";
+import softSkillM from "../assets/images/soft-skill__medium.jpg";
+import softSkillL from "../assets/images/soft-skill__large.jpg";
 
 function About() {
   const { t } = useTranslation();
-
-  useTitle(t("title.about"));
+  useTitle(t("header.projects"));
 
   const skills = t("about.softSkills.skills", {
     returnObjects: true,
@@ -36,9 +36,18 @@ function About() {
 
   return (
     <main className="about mt-10xl">
-      <section className="pos-r about__skills flex plr-small">
+      <section className="pos-r about__skills flex">
         <div className="circle circle--semicircle-left"></div>
-        <div className="about__skills__text pr-5 ptb-custom">
+        <div className="about__skills__text pr-5 ptb-custom pos-r">
+          <motion.img
+            src={html}
+            className="html-icon png-w"
+            alt="HTML Icon"
+            variants={fromTop}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          />
           <h1 className="fs-xl pb-sm">{t("about.hardSkills.heading")}</h1>
           <ul className="fs-base ml-lg">
             <li>Git & Github</li>
@@ -50,16 +59,7 @@ function About() {
             <li>BEM</li>
           </ul>
         </div>
-        <div className="about__skills__img hardSkillsImage pl-5">
-          {/* <motion.img
-            src={codeIcon}
-            className="frontend__icon-puzzle png-w"
-            alt="Puzzle"
-            variants={fromTop}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          /> */}
+        <div className="about__skills__img hardSkillsImage">
           <motion.img
             src={codeGif}
             className="code-gif img-contain"
@@ -71,12 +71,12 @@ function About() {
         </div>
       </section>
 
-      <section className="pos-r frontend flex text-center flex-fd--c flex-ai--c ptb-custom linear-bg plr-custom txt-color-primary">
+      <section className="pos-r about__frontend flex text-center flex-fd--c flex-ai--c ptb-custom linear-bg plr-custom txt-color-primary">
         <motion.img
           src={work}
           loading="lazy"
-          className="frontend__icon-coding png-w"
-          alt="Coding"
+          className="png-w"
+          alt="Icon"
           variants={fromTop}
           initial="hidden"
           whileInView="visible"
@@ -85,7 +85,7 @@ function About() {
         <motion.img
           src={puzzle}
           loading="lazy"
-          className="frontend__icon-puzzle pos-a png-w"
+          className="icon-puzzle pos-a png-w"
           alt="Puzzle"
           variants={fromTop}
           initial="hidden"
@@ -93,7 +93,7 @@ function About() {
           viewport={{ once: true }}
         />
         <h2 className="fs-xl pt-md pb-lg">{t("about.frontend.heading")}</h2>
-        <div className="frontend__text">
+        <div className="about__frontend__text">
           {frontendReasons.map((reason: string, index: number) => (
             <p className="pb-lg fs-base" key={index}>
               {reason}
@@ -102,10 +102,10 @@ function About() {
         </div>
       </section>
 
-      <section className="pos-r about__skills flex ptb-custom plr-custom">
+      <section className="pos-r about__skills flex">
         <div className="circle circle--semicircle-left"></div>
         <div className="circle circle--semicircle-right"></div>
-        <div className="about__skills__text pr-5">
+        <div className="about__skills__text pr-5 ptb-custom pt-res">
           <h1 className="fs-xl pb-sm">{t("about.softSkills.heading")}</h1>
           <div className="fs-base">
             <ul className="ml-lg">
@@ -115,20 +115,22 @@ function About() {
             </ul>
           </div>
         </div>
-        <div className="about__skills__img pl-5">
+        <div className="about__skills__img softSkillsWrap">
           <motion.img
             srcSet={`
-              ${softSkillSmall} 640w,
-              ${softSkillBig} 1920w
-            `}
+    ${softSkillS} 640w,
+    ${softSkillM} 1280w,
+    ${softSkillL} 1920w
+  `}
             sizes="
-              (max-width: 640px) 640px,
-              (min-width: 641px) and (max-width: 1920px) 960px,
-              960px
-            "
-            src={softSkillBig}
+    (max-width: 640px) 100vw,
+    (min-width: 641px) and (max-width: 1024px) 80vw,
+    (min-width: 1025px) 1920px
+  "
+            src={softSkillL}
             alt="Soft Skill Image"
-            className="about-me__img__profile img-contain"
+            loading="lazy"
+            className="soft-img "
             variants={fromOpacity}
             initial="hidden"
             animate="visible"
@@ -157,7 +159,7 @@ function About() {
           viewport={{ once: true }}
           variants={fromTop}
         />
-        <h2 className="fs-xl pb-sm pt-md">{t("about.frontend.heading")}</h2>
+        <h2 className="fs-xl pb-sm pt-md">{t("about.learning.heading")}</h2>
         <div className="learning__text fs-base">
           {learningReasons.map((reason: string, index: number) => (
             <p className="pb-lg fs-base" key={index}>
