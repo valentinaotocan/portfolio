@@ -52,29 +52,5 @@ export const fromTop = {
   },
 };
 
-// Function to generate the zoomOnHover variant based on device type
-const getZoomOnHover = () => {
-  const isMobile = window.innerWidth < 768;
 
-  if (isMobile) {
-    // Return a hover variant with no scaling for mobile devices
-    return {
-      hover: {
-        scale: 1, // No scaling
-      },
-    };
-  }
-
-  // Return the hover variant for desktop devices
-  return {
-    hover: {
-      scale: 1.1,
-      transition: {
-        duration: 0.3, 
-        ease: commonEase,
-      },
-    },
-  };
-};
-export const zoomOnHover = getZoomOnHover();
 
