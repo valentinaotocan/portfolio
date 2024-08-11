@@ -78,7 +78,11 @@
     "tags": "Tagovi",
     "prevalent": "Najviše prevladava",
     "created": "Stvoreno",
-    "more": "Vidi više"
+    "more": "Vidi više",
+    "error": {
+      "general": "Nešto nije u redu.",
+      "fetch": "Pogreška u dohvaćanju informacija s poslužitelja."
+    }
   },
 
   "footer": {

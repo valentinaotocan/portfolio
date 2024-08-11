@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import Loader from "../components/Loader";
-import exclamation from "../assets/images/icons/exclamation-mark.png";
 import useTitle from "../hooks/useTitle";
+import ProjectErrorMessage from "../components/ProjectErrorMessage";
 
 interface Post {
   html_url: string;
@@ -62,13 +62,7 @@ function Project() {
   }
 
   if (error) {
-    return (
-      <div className="error">
-        <img src={exclamation} alt="Error" />
-        <p className="fs-xl">Nešto nije u redu.</p>
-        <p>Pogreška u dohvaćanju informacija s poslužitelja.</p>
-      </div>
-    );
+    return <ProjectErrorMessage />;
   }
 
   return (

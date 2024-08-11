@@ -78,7 +78,11 @@
     "tags": "Tags",
     "prevalent": "Most prevalent",
     "created": "Created",
-    "more": "See more"
+    "more": "See more",
+    "error": {
+      "general": "Something went wrong.",
+      "fetch": "Error fetching information from the server."
+    }
   },
 
   "footer": {
