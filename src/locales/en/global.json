@@ -5,6 +5,7 @@
     "projects": "Projects",
     "contact": "Contact"
   },
+
   "home": {
     "personal": {
       "greeting": "Hey!",
@@ -18,6 +19,7 @@
       "growth": "Dedicated to continuous growth through coding bootcamps and online courses."
     }
   },
+
   "about": {
     "hardSkills": {
       "heading": "Hard skills"
@@ -68,6 +70,17 @@
       }
     }
   },
+
+  "projects": {
+    "heading": "projects",
+    "title": "Project name",
+    "description": "Description",
+    "tags": "Tags",
+    "prevalent": "Most prevalent",
+    "created": "Created",
+    "more": "See more"
+  },
+
   "footer": {
     "rightsReserved": "All rights reserved"
   }

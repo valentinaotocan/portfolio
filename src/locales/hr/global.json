@@ -5,6 +5,7 @@
     "projects": "Projekti",
     "contact": "Kontakt"
   },
+
   "home": {
     "personal": {
       "greeting": "Pozdrav!",
@@ -18,6 +19,7 @@
       "growth": "Posvećena kontinuiranom rastu kroz coding bootcampove i online tečajeve."
     }
   },
+
   "about": {
     "hardSkills": {
       "heading": "Tvrde vještine"
@@ -68,6 +70,17 @@
       }
     }
   },
+
+  "projects": {
+    "heading": "projekti",
+    "title": "Ime projekta",
+    "description": "Opis",
+    "tags": "Tagovi",
+    "prevalent": "Najviše prevladava",
+    "created": "Stvoreno",
+    "more": "Vidi više"
+  },
+
   "footer": {
     "rightsReserved": "Sva prava pridržana"
   }
