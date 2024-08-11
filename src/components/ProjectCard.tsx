@@ -1,8 +1,14 @@
 import { ProjectCardProps } from "../types";
+import { motion } from "framer-motion";
+import { zoomOnHover } from "../animations";
 
 function ProjectCard({ post, t, formatDate }: ProjectCardProps) {
   return (
-    <div className="projects__cards__card flex flex-fd--c flex-jc--sb">
+    <motion.div
+      className="projects__cards__card flex flex-fd--c flex-jc--sb"
+      whileHover="hover"
+      variants={zoomOnHover}
+    >
       <div>
         <h2>
           {t("projects.title")}: {post.name}
@@ -29,7 +35,7 @@ function ProjectCard({ post, t, formatDate }: ProjectCardProps) {
           {t("projects.more")}
         </button>
       </a>
-    </div>
+    </motion.div>
   );
 }
 
