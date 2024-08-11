@@ -1,4 +1,3 @@
-
 export const fromOpacity = {
   hidden: {
     opacity: 0,

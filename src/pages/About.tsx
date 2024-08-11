@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { fromOpacity, fromTop } from "../Animation";
+import { fromOpacity, fromTop } from "../animations";
 import { useTranslation } from "react-i18next";
 import useTitle from "../hooks/useTitle";
 import programming from "../assets/images/programming.jpeg";

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { fromOpacity } from "../Animation";
-import { fromTop } from "../Animation";
+import { fromOpacity } from "../animations";
+import { fromTop } from "../animations";
 import useTitle from "../hooks/useTitle";
 import girl from "../assets/images/girl.webp";
 import laptop from "../assets/images/icons/laptop.png";

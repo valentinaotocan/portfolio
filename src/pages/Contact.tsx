@@ -1,13 +1,12 @@
 import useTitle from "../hooks/useTitle";
-import bottle from '../assets/images/icons/message-in-a-bottle.png';
+import bottle from "../assets/images/icons/message-in-a-bottle.png";
 import pigeon from "../assets/images/icons/pigeon.png";
 import { useTranslation } from "react-i18next";
 import { BsFacebook, BsLinkedin, BsInstagram } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
 import { FaMobileScreen } from "react-icons/fa6";
 import { motion } from "framer-motion";
-import { fromOpacity, fromTop } from "../Animation";
-
+import { fromOpacity, fromTop } from "../animations";
 
 function Contact() {
   const { t } = useTranslation();

@@ -3,15 +3,9 @@ import { useTranslation } from "react-i18next";
 import Loader from "../components/Loader";
 import useTitle from "../hooks/useTitle";
 import ProjectErrorMessage from "../components/ProjectErrorMessage";
-
-interface Post {
-  html_url: string;
-  name: string;
-  description: string | null;
-  topics: string[];
-  language: string;
-  created_at: string;
-}
+import ProjectCard from "../components/ProjectCard";
+import { formatDate } from "../utils/dateUtils";
+import { Post } from "../types";
 
 function Project() {
   const { t } = useTranslation();
@@ -20,19 +14,6 @@ function Project() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
-
-  const formatDate = (dateString: string) => {
-    const dateObject = new Date(dateString);
-    const day = dateObject.getDate();
-    const month = dateObject.getMonth() + 1;
-    const year = dateObject.getFullYear();
-
-    const formattedDate = `${day < 10 ? "0" : ""}${day}.${
-      month < 10 ? "0" : ""
-    }${month}.${year}.`;
-
-    return formattedDate;
-  };
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -70,45 +51,14 @@ function Project() {
       <div className="circle circle--small"></div>
       <h1 className="fs-xl pb-xl">Github {t("projects.heading")}</h1>
       <div className="projects__cards">
-        {posts.map((post) => {
-          return (
-            <div
-              key={post.name}
-              className="projects__cards__card flex flex-fd--c flex-jc--sb"
-            >
-              <div>
-                <h2>
-                  {t("projects.title")}: {post.name}
-                </h2>
-                <p className="ellipsis ellipsis--3">
-                  <span className="fw-semiBold">
-                    {t("projects.description")}:{" "}
-                  </span>
-                  {post.description !== null ? post.description : "/"}
-                </p>
-                <p className="ellipsis">
-                  <span className="fw-semiBold">{t("projects.tags")}: </span>
-                  {post.topics.length > 0 ? post.topics.join(", ") : "/"}
-                </p>
-                <p>
-                  <span className="fw-semiBold">
-                    {t("projects.prevalent")}:{" "}
-                  </span>
-                  {post.language}
-                </p>
-                <p>
-                  <span className="fw-semiBold">{t("projects.created")}: </span>{" "}
-                  {formatDate(post.created_at)}
-                </p>
-              </div>
-              <a href={post.html_url}>
-                <button type="button" className="btn linear-bg sans-serif2">
-                  {t("projects.more")}
-                </button>
-              </a>
-            </div>
-          );
-        })}
+        {posts.map((post) => (
+          <ProjectCard
+            key={post.name}
+            post={post}
+            t={t}
+            formatDate={formatDate}
+          />
+        ))}
       </div>
     </section>
   );
