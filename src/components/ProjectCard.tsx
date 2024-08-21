@@ -6,7 +6,7 @@ function ProjectCard({ post, t, formatDate }: ProjectCardProps) {
       className="projects__cards__card flex flex-fd--c flex-jc--sb"
     >
       <div>
-        <h2>
+        <h2 className="shadow">
           {t("projects.title")}: {post.name}
         </h2>
         <p className="ellipsis ellipsis--3">

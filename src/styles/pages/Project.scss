@@ -16,6 +16,11 @@
       height: toRem(400px);
       padding: toRem(16px);
 
+      .shadow {
+        text-shadow: 2px 4px 3px rgba(21, 21, 128, 0.17);
+        font-variant: small-caps;
+      }
+
       a {
         align-self: center;
       }
