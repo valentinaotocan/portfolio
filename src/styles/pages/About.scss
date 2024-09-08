@@ -71,16 +71,17 @@
 
   // FRONTEND SECTION
   &__frontend {
-    .icon-puzzle {
-      bottom: toRem(-44px);
-      right: 11%;
-      z-index: 1;
-    }
 
     &__text {
       max-width: toRem(550px);
     }
   }
+
+    .icon-down {
+      bottom: toRem(-44px);
+      right: 11%;
+      z-index: 1;
+    }
 
   // SOFT-SKILLS
   &__skills__img.softSkillsWrap {
@@ -101,6 +102,14 @@
     }
   }
 
+  // LEARNING SECTION
+    .learning {
+    &__text {
+      max-width: toRem(552px);
+    }
+  }
+
+// HOBBY SECTION
   &__hobby {
     &__wrap {
       max-width: toRem(550px);
@@ -124,47 +133,6 @@
     }
   }
 
-  .knowledge {
-    &__icon-html {
-      z-index: 1;
-      bottom: toRem(22px);
-      left: 17%;
-    }
-    &__text {
-      width: 50%;
-    }
-    &__image {
-      width: 50%;
-    }
-    @media (max-width: toRem(1024px)) {
-      flex-direction: column;
-      &__icon-html {
-        bottom: toRem(-5px);
-      }
-      &__text {
-        width: 100%;
-        padding-bottom: toRem(70px);
-      }
-      &__image {
-        width: 100%;
-      }
-    }
-    @media (max-width: toRem(425px)) {
-      &__text__items {
-        flex-direction: column;
-      }
-    }
-  }
-
-  .learning {
-    &__icon-brain {
-      bottom: 0px;
-      right: 17%;
-    }
-    &__text {
-      max-width: toRem(552px);
-    }
-  }
 
   @media (max-width: toRem(1024px)) {
     .knowledge__text {

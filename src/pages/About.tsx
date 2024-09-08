@@ -81,7 +81,7 @@ function About() {
         <motion.img
           src={puzzle}
           loading="lazy"
-          className="icon-puzzle pos-a png-w"
+          className="icon-down pos-a png-w"
           alt="Puzzle"
           variants={fromTop}
           initial="hidden"
@@ -138,8 +138,8 @@ function About() {
         <motion.img
           src={mindset}
           loading="lazy"
-          className="learning__icon-process img-contain png-w"
-          alt="Learning process"
+          className="img-contain png-w"
+          alt="Mindset"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -148,7 +148,7 @@ function About() {
         <motion.img
           src={goingUp}
           loading="lazy"
-          className="learning__icon-up pos-a img-contain png-w"
+          className="icon-down pos-a img-contain png-w"
           alt="Brain"
           initial="hidden"
           whileInView="visible"
