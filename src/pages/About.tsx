@@ -2,20 +2,16 @@ import { motion } from "framer-motion";
 import { fromOpacity, fromTop } from "../animations";
 import { useTranslation } from "react-i18next";
 import useTitle from "../hooks/useTitle";
-import programming from "../assets/images/programming.jpeg";
 import codeGif from "../assets/images/code-gif.webp";
-import studioVisualCode from "../assets/images/icons/code.png";
-import puzzle from "../assets/images/icons/puzzle.png";
-import book from "../assets/images/icons/book.png";
-import sunset from "../assets/images/icons/sunset.png";
-import succulent from "../assets/images/icons/succulent.png";
-import work from "../assets/images/icons/work.png";
+import html from "../assets/images/icons/black/html.png";
+import book from "../assets/images/icons/black/book.png";
+import sunset from "../assets/images/icons/black/sunset.png";
+import succulent from "../assets/images/icons/black/succulent.png";
+import work from "../assets/images/icons/white/work.png";
+import puzzle from "../assets/images/icons/white/puzzle.png";
+import mindset from "../assets/images/icons/white/mindset.png";
+import goingUp from "../assets/images/icons/white/going-up.png";
 import Slider from "../components/Slider";
-import html from "../assets/images/icons/html.png";
-import nextLevel from "../assets/images/icons/next-level.png";
-import brainProcess from "../assets/images/icons/brain-process.png";
-import brain from "../assets/images/icons/brain.png";
-import screen from "../assets/images/screen.jpg";
 import softSkillS from "../assets/images/soft-skill__small.jpg";
 import softSkillM from "../assets/images/soft-skill__medium.jpg";
 import softSkillL from "../assets/images/soft-skill__large.jpg";
@@ -140,7 +136,7 @@ function About() {
 
       <section className="pos-r learning flex flex-fd--c flex-ai--c text-center ptb-custom plr-custom linear-bg txt-color-primary">
         <motion.img
-          src={brainProcess}
+          src={mindset}
           loading="lazy"
           className="learning__icon-process img-contain png-w"
           alt="Learning process"
@@ -150,9 +146,9 @@ function About() {
           variants={fromTop}
         />
         <motion.img
-          src={brain}
+          src={goingUp}
           loading="lazy"
-          className="learning__icon-brain pos-a img-contain png-w"
+          className="learning__icon-up pos-a img-contain png-w"
           alt="Brain"
           initial="hidden"
           whileInView="visible"

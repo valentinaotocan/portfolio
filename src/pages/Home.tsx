@@ -4,8 +4,8 @@ import { fromOpacity } from "../animations";
 import { fromTop } from "../animations";
 import useTitle from "../hooks/useTitle";
 import girl from "../assets/images/girl.webp";
-import laptop from "../assets/images/icons/laptop.png";
-import ecology from "../assets/images/icons/ecology.png";
+import laptop from "../assets/images/icons/white/laptop.png";
+import ecology from "../assets/images/icons/white/ecology.png";
 
 function Home() {
   const { t } = useTranslation();

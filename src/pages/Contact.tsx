@@ -1,6 +1,6 @@
 import useTitle from "../hooks/useTitle";
-import bottle from "../assets/images/icons/message-in-a-bottle.png";
-import pigeon from "../assets/images/icons/pigeon.png";
+import bottle from "../assets/images/icons/black/message-in-a-bottle.png";
+import pigeon from "../assets/images/icons/black/pigeon.png";
 import { useTranslation } from "react-i18next";
 import { BsFacebook, BsLinkedin, BsInstagram } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
