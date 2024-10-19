@@ -22,6 +22,7 @@
       align-items: center;
       justify-content: center;
       height: toRem(800px);
+
       &::before {
         content: "";
         background: url("https://images.unsplash.com/photo-1563206767-5b18f218e8de")
@@ -51,10 +52,7 @@
 
       &__text {
         width: 100%;
-        padding-right: 0;
-        padding-top: toRem(70px);
-        padding-right: 10%;
-        padding-bottom: toRem(70px);
+        padding: toRem(70px) 10% 0 0;
       }
 
       &__img {
@@ -71,17 +69,16 @@
 
   // FRONTEND SECTION
   &__frontend {
-
     &__text {
       max-width: toRem(550px);
     }
   }
 
-    .icon-down {
-      bottom: toRem(-44px);
-      right: 11%;
-      z-index: 1;
-    }
+  .icon-down {
+    bottom: toRem(-44px);
+    right: 11%;
+    z-index: 1;
+  }
 
   // SOFT-SKILLS
   &__skills__img.softSkillsWrap {
@@ -98,25 +95,27 @@
 
       .soft-img {
         width: 100%;
-      }  
+      }
     }
   }
 
   // LEARNING SECTION
-    .learning {
+  .learning {
     &__text {
       max-width: toRem(552px);
     }
   }
 
-// HOBBY SECTION
+  // HOBBY SECTION
   &__hobby {
     &__wrap {
       max-width: toRem(550px);
+
       .icon-book,
       .icon-nature,
       .icon-succulent {
         top: toRem(5px);
+
         @media (max-width: toRem(1205px)) {
           display: none;
         }
@@ -124,22 +123,23 @@
       .icon-book {
         right: -45%;
       }
+
       .icon-nature {
         right: -65%;
       }
+
       .icon-succulent {
         right: -85%;
       }
     }
   }
 
-
   @media (max-width: toRem(1024px)) {
     .knowledge__text {
       padding-right: 0;
     }
     .w-rsp {
-      width: 1000px;
+      width: 100%;
     }
   }
 }
