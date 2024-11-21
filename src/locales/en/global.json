@@ -78,6 +78,7 @@
     "tags": "Tags",
     "prevalent": "Most prevalent",
     "created": "Created",
+    "updated": "Last update",
     "more": "See more",
     "error": {
       "general": "Something went wrong.",

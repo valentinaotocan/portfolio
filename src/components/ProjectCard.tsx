@@ -27,6 +27,10 @@ function ProjectCard({ post, t, formatDate }: ProjectCardProps) {
             <span className="fw-semiBold">{t("projects.created")}: </span>{" "}
             {formatDate(post.created_at)}
           </p>
+          <p>
+            <span className="fw-semiBold">{t("projects.updated")}: </span>{" "}
+            {formatDate(post.updated_at)}
+          </p>
         </div>
         <a href={post.html_url}>
           <button type="button" className="btn linear-bg sans-serif2">
