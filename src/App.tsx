@@ -10,6 +10,7 @@ import PageTransition from "./components/PageTransition";
 import getRoutes from "./locales/routes";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   // Use the translation hook to access the current language
@@ -24,6 +25,8 @@ function App() {
   return (
     <>
       <Header />
+
+      <ScrollToTop />
 
       {/* AnimatePresence enables animations when the route changes */}
       <AnimatePresence mode="wait" initial={false}>
@@ -72,7 +75,7 @@ function App() {
           />
         </Routes>
       </AnimatePresence>
-      
+
       <Footer />
     </>
   );
