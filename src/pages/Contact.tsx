@@ -57,7 +57,7 @@ function Contact() {
           </a>
         </div>
         <div className="pt-md">
-          <p className="pb-xs">Društvene mreže</p>
+          <p className="pb-xs">{t("contact.platforms")}</p>
           <a
             href="https://www.facebook.com/valentinaotocan"
             rel="external"

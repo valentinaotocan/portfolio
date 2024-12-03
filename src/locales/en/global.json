@@ -86,6 +86,10 @@
     }
   },
 
+  "contact": {
+    "platforms": "Social platforms"
+  },
+
   "footer": {
     "rightsReserved": "All rights reserved"
   }

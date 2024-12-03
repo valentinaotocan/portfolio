@@ -18,7 +18,7 @@ import softSkillL from "../assets/images/soft-skill__large.jpg";
 
 function About() {
   const { t } = useTranslation();
-  useTitle(t("header.projects"));
+  useTitle(t("header.about"));
 
   const skills = t("about.softSkills.skills", {
     returnObjects: true,

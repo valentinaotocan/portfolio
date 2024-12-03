@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { AnimatePresence } from "framer-motion";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Project from "./pages/Project";
+import Projects from "./pages/Projects";
 import NotFound from "./pages/NotFound";
 import Contact from "./pages/Contact";
 import PageTransition from "./components/PageTransition";
@@ -13,26 +13,26 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
-  // Use the translation hook to access the current language
   const { i18n } = useTranslation();
 
-  // Get the routes based on the current language
-  const routes = getRoutes(i18n.language);
+  // If language is 'auto', default to 'en'
+  const lang =
+    i18n.language === "auto" ||
+    !(i18n.language === "en" || i18n.language === "hr")
+      ? "en"
+      : i18n.language;
 
-  // Get the current location to ensure routes animate on change
+  // Fetch routes based on current language
+  const routes = getRoutes(lang);
+
   const location = useLocation();
 
   return (
     <>
       <Header />
-
       <ScrollToTop />
-
-      {/* AnimatePresence enables animations when the route changes */}
       <AnimatePresence mode="wait" initial={false}>
-        {/* Routes component handles rendering the correct page component based on the path */}
         <Routes location={location} key={location.pathname}>
-          {/* Define individual routes with animations */}
           <Route
             path={routes.home}
             element={
@@ -53,7 +53,7 @@ function App() {
             path={routes.projects}
             element={
               <PageTransition>
-                <Project />
+                <Projects />
               </PageTransition>
             }
           />
@@ -75,7 +75,6 @@ function App() {
           />
         </Routes>
       </AnimatePresence>
-
       <Footer />
     </>
   );

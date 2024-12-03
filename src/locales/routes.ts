@@ -1,29 +1,27 @@
-type Routes = {
-  home: string;
-  about: string;
-  projects: string;
-  contact: string;
+type Route = {
+  name: string;
+  en: string;
+  hr: string;
 };
 
-type Language = "en" | "hr";
+const routesArray: Route[] = [
+  { name: "home", en: "/", hr: "/" },
+  { name: "about", en: "/about", hr: "/o-nama" },
+  { name: "projects", en: "/projects", hr: "/projekti" },
+  { name: "contact", en: "/contact", hr: "/kontakt" },
+];
 
-const getRoutes = (language: string): Routes => {
-  const routes: Record<Language, Routes> = {
-    en: {
-      home: "/",
-      about: "/about",
-      projects: "/projects",
-      contact: "/contact",
-    },
-    hr: {
-      home: "/",
-      about: "/o-nama",
-      projects: "/projekti",
-      contact: "/kontakt",
-    },
-  };
+export const getRoutes = (language: "en" | "hr"): Record<string, string> => {
+  // If the provided language is invalid or unrecognized
+  if (language !== "en" && language !== "hr") {
+    language = "en";
+  }
 
-  return routes[language as Language] || routes.en;
+  const result = Object.fromEntries(
+    routesArray.map((route) => [route.name, route[language]])
+  );
+
+  return result;
 };
 
 export default getRoutes;

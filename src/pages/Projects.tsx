@@ -7,7 +7,7 @@ import ProjectCard from "../components/ProjectCard";
 import { formatDate } from "../utils/dateUtils";
 import { Post } from "../types";
 
-function Project() {
+function Projects() {
   const { t } = useTranslation();
   useTitle(t("header.projects"));
 
@@ -63,4 +63,4 @@ function Project() {
     </section>
   );
 }
-export default Project;
+export default Projects;
